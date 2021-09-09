@@ -1,0 +1,546 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+    color:rgba(5, 156, 43, 0.568);
+}
+a{
+    text-align: center;
+}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+h2{
+  text-align: center;
+  color:rgba(5, 156, 43, 0.932);
+}
+</style>
+</head>
+<body>
+<div>
+    <h2>TRACKING</h2>
+
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 10</div>
+        <img src="pennine way.jpg" style="width:100%; height:50%">
+      <div class="text">Pennine Way</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 10</div>
+        <img src="annapurna.jpg" style="width:100%; height:50%">
+      <div class="text">Annapurna Circuit</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 10</div>
+        <img src="Camino de Santiago.jpg" style="width:100%; height:50%">
+      <div class="text">Camino de Santiago</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 10</div>
+        <img src="Appalachian Trail.jpg" style="width:100%; height:50%">
+      <div class="text"> Appalachian Trail</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 10</div>
+      <img src="Mount Toubkal.jpg" style="width:100%; height:50%">
+      <div class="text">Mount Toubkal</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 10</div>
+      <img src="Hiking-the-Dragons-Back-Trail.jpg" style="width:100%; height:50%">
+      <div class="text">Dragon's Back</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 10</div>
+      <img src="latrek.jpg" style="width:100%; height:50%">
+      <div class="text">Tergo La Trek</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 10</div>
+      <img src="Routeburn Track.jpg" style="width:100%; height:50%">
+      <div class="text">Routeburn Track</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 10</div>
+        <img src="Pays Dogon.jpg" style="width:100%; height:50%">
+      <div class="text">Pays Dogon</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 10</div>
+      <img src="The Great Wall of China.jpg" style="width:100%; height:50%">
+      <div class="text">Great Wall of China</div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+    </script>
+    
+</div>
+<div>
+<h1>Pennine Way</h1>
+<img src="pennine way.jpg" alt="Pennine Way" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.9192712654108!2d-2.0188813846656473!3d54.51728509405979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487c3be4d2443467%3A0x2a46648d5186956b!2sPennine%20Way%20(Bowes%20Loop)%2C%20Bowes%2C%20Barnard%20Castle%2C%20UK!5e0!3m2!1sen!2sbd!4v1621798707073!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>
+    Stretching 268 miles from the Derbyshire Peak District to the Scottish Borders, the Pennine Way is the United Kingdom's most famous long distance path.
+    The entire walk takes around three weeks, passing over wild moorland east of Manchester and through the picture postcard Yorkshire Dales, before crossing the ancient border of Hadrian's Wall and on toward Scotland.
+    One for outdoor fanatics, camping enthusiasts and anyone who can handle the vagaries of great British weather.
+    The Pennine Way originally climbed north from Edale across the middle of the Kinder Scout plateau. It was rerouted to reduce erosion, and now heads west to climb onto the plateau by steps known as Jacob's Ladder. It then turns north to follow the western edge of the plateau past Kinder Downfall, crosses the Snake Pass road (A57) and climbs Bleaklow. From the summit the trail descends to Longdendale. In the dale it crosses the dam of Torside Reservoir to Crowden, the first village since the start of the trail 16 miles (26 km) away.
+    The Pennine Way is popular with walkers, and in 1990 the Countryside Commission reported that 12,000 long-distance walkers and 250,000 day-walkers were using all or part of the trail annually and that walkers contributed £2 million (1990) to the local economy along the route, directly maintaining 156 jobs.
+</p>
+
+<a href="https://en.wikipedia.org/wiki/Pennine_Way"><h3>For more details</h3></a>
+</div>
+<br>
+<div>
+<h1>Annapurna Circuit</h1>
+<img src="annapurna.jpg" alt="Annapurna Circuit" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.550315258786!2d75.82993761427558!3d22.67054893508297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fc6afa558c7f%3A0xac39f80b33fe582e!2sAnnapurna%20Road%2C%20Rajendra%20Nagar%20Naka%2C%20Indore%2C%20Madhya%20Pradesh%20452012%2C%20India!5e0!3m2!1sen!2sbd!4v1621798983915!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>
+    The Annapurna Circuit is a trek within the mountain ranges of central Nepal. The total length of the route varies between 160–230 km (100-145 mi), depending on where motor transportation is used and where the trek is ended. This trek crosses two different river valleys and encircles the Annapurna Massif. The path reaches its highest point at Thorung La pass (5416m/17769 ft), touching the edge of the Tibetan plateau. Practically all trekkers hike the route anticlockwise, as this way the daily altitude gain is slower, and crossing the high Thorong La pass is easier and safer.
+
+    In addition to the Annapurna Circuit Trek, Annapurna Seven Passes Trek or Annapurna Seven Hills trek is also popular in the region. However, this is less traversed and is off the beaten path trek in the region.
+    
+    The mountain scenery, seen at close quarters includes the Annapurna Massif (Annapurna I-IV), Dhaulagiri, Machhapuchhre, Manaslu, Gangapurna, Tilicho Peak, Pisang Peak, and Paungda Danda. Numerous other peaks of 6000-8000m in elevation rise from the Annapurna range.
+    
+    The trek begins at Besisahar or Bhulbhule in the Marshyangdi river valley and concludes in the Kali Gandaki Gorge. Besisahar can be reached after a seven-hour drive from Kathmandu. The trail passes along paddy fields and into subtropical forests, several waterfalls and gigantic cliffs, and various villages. 
+</p>
+<a href="https://en.wikipedia.org/wiki/Annapurna_Circuit"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Camino de Santiago</h1>
+    <img src = "Camino de Santiago.jpg" alt="Camino de Santiago" style="width:40%;"> 
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25097683.261826973!2d-17.05729624537867!3d39.83654603742935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50c477e5557dc1%3A0xae2d83857c794cb6!2sCamino%20de%20Santiago%20Lintzoain!5e0!3m2!1sen!2sbd!4v1621799083256!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>
+    The Camino de Santiago known in English as the Way of St. James, is a network of pilgrims' ways or pilgrimages leading to the shrine of the apostle Saint James the Great in the cathedral of Santiago de Compostela in Galicia in northwestern Spain, where tradition has it that the remains of the saints are buried there. Many follow its routes as a form of spiritual path or retreat for their spiritual growth. It is also popular with hiking and cycling enthusiasts and organized tour groups. 
+    Way of St. James was one of the most important Christian pilgrimages during the later Middle Ages, and a pilgrimage route on which a plenary indulgence could be earned; other major pilgrimage routes include the Via Francigena to Rome and the pilgrimage to Jerusalem.
+    Legend holds that St. James's remains were carried by boat from Jerusalem to northern Spain, where he was buried in what is now the city of Santiago de Compostela.
+    The Way can take one of dozens of pilgrimage routes to Santiago de Compostela. Traditionally, as with most pilgrimages, the Way of Saint James begins at one's home and ends at the pilgrimage site. However, a few of the routes are considered main ones. During the Middle Ages, the route was highly travelled. However, the Black Death, the Protestant Reformation, and political unrest in 16th century Europe led to its decline. By the 1980s, only a few hundred pilgrims per year registered in the pilgrim's office in Santiago. In October 1987, the route was declared the first European Cultural Route by the Council of Europe; it was also named one of UNESCO's World Heritage Sites. Since the 1980s the route has attracted a growing number of modern-day international pilgrims.
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Camino_de_Santiago"><h3>For more details</h3></a>
+    </div>
+<div>
+<h1> Appalachian Trail</h1>
+ <img src = "Appalachian Trail.jpg" alt=" Appalachian Trail" style="width:40%;">   
+ <br>
+ <section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6020633.844350177!2d-77.71625704277649!3d42.53909703538888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb0e1fed851f3d7%3A0x6b5f9b6e1b6be99d!2sAppalachian%20Trail!5e0!3m2!1sen!2sbd!4v1621799225224!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+ <p>
+    The Appalachian National Scenic Trail, generally known as the Appalachian Trail or simply the A.T., is a marked hiking trail in the Eastern United States extending between Springer Mountain in Georgia and Mount Katahdin in Maine.The trail is about 2,200 miles (3,500 km) long, though the exact length changes over time as parts are rerouted or modified. The Appalachian Trail Conservancy describes the Appalachian Trail as the longest hiking-only trail in the world.More than 2 million people are said to take a hike on part of the trail at least once each yearThe Appalachian National Scenic Trail, generally known as the Appalachian Trail or simply the A.T., is a marked hiking trail in the Eastern United States extending between Springer Mountain in Georgia and Mount Katahdin in Maine.The trail is about 2,200 miles (3,500 km) long, though the exact length changes over time as parts are rerouted or modified.The Appalachian Trail Conservancy describes the Appalachian Trail as the longest hiking-only trail in the world.More than 2 million people are said to take a hike on part of the trail at least once each year.
+    An extension known as the International Appalachian Trail continues northeast, crossing Maine and cutting through Canada to Newfoundland, with sections continuing in Greenland, through Europe, and into Morocco. Other separate extensions continue the southern end of the Appalachian range in Alabama and continue south into Florida, creating what is known as the Eastern Continental Trail. 
+</p>
+
+ <a href="https://en.wikipedia.org/wiki/Appalachian_Trail"><h3>For more details</h3></a>
+</div>
+<br>
+<div>
+    <h1>Mount Toubkal</h1>
+    <img src = "Mount Toubkal.jpg" alt="Mount Toubkal" style="width:40%;">   
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13671.139253450785!2d-7.923502977806156!3d31.06008953569987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb00cfde4f96ed1%3A0x7934f4c42445d7f9!2sToubkal!5e0!3m2!1sen!2sbd!4v1621799280881!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>
+     Toubkal or Tubkal s a mountain peak in southwestern Morocco, located in the Toubkal National Park.Although much of the High Atlas consists of sedimentary rocks, the Toubkal massif is an area of volcanic rocks which have weathered into alpine crests, cut by deep, narrow valleys. To the south, the mountain drops steeply down for 1,800 metres (5,906 ft) to a small lake called Lac d'Ifni. To the west, the mountain's edge is marked by a pass, the Tizi n'Ouanoums at 3,664 metres (12,021 ft). From this pass, the mountain's W-S-W ridge rises up to Toubkal West, which forms a shoulder at 4,020 metres (13,189 ft) before continuing to the summit at 4,167 metres (13,671 ft).
+     Toubkal is popular with trekkers and ski mountaineers, but less so with climbers, despite its ease of access and sunny climate. Trekkers usually approach the mountain from Marrakesh via the road-end village of Imlil. Qualified guides can be hired, as well as porters, to carry equipment and food supplies higher into the mountains. Since 2018, guides are now required even for the normal route,due to recent events on the trail (murder and deadly slips). Otherwise it is a moderate hike and navigation is not a problem. 
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Toubkal"><h3>For more details</h3></a>
+</div>
+<div>
+<h1> Dragon's Back</h1>
+<img src = "Hiking-the-Dragons-Back-Trail.jpg" alt="Dragon's Back" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14772.329959170667!2d114.23447041893625!3d22.2369487776125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040203c3963d6d%3A0xb4dcd19a2ed607fe!2sDragon&#39;s%20Back!5e0!3m2!1sen!2sbd!4v1621799337701!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p> 
+    The last leg of the Hong Kong Trail, this meandering path on the ridge of Dragon’s Back is widely hailed as one of Hong Kong’s best urban hikes. Besides its attractive name, Dragon’s Back has a sightseeing platform near its peak that provides truly spectacular views of southern Hong Kong Island and its shoreline. Right at the trail’s end is Big Wave Bay. Take a dip or surf the waves for a relaxing finale to this hike.
+    From Shek O Road, you will first walk through a shaded path onto this section of the Hong Kong Trail. About a minute into your hike, the path will open up to the sky as you ascend. After 20 minutes or so, you’ll find yourself on the Shek O Peninsula Viewing Point overlooking Shek O Beach on the foot of the hill, and also the two isles off Shek O Peninsula.
+    lthough bare and exposed, the platform on the summit of Shek O Peak (284 m) is the perfect place to take in the panorama of the peninsula’s coastline. When you turn around to observe the winding trails, you’ll finally see how Dragon’s Back got its well-deserved name. 
+    Stay on the rolling ridge to trace the “dragon” while you climb uphill. Stop at the Dragon's Back Hike Viewing Point for a great view of the Tai Tam Bay west of Shek O Peninsula. On a clear day, even Lamma Island, to the southwest of Hong Kong Island, is visible from the deck. Once over the ridge, you'll arrive at Pottinger Gap. Here you get a view of Chai Wan’s urban high-rises against a forested landscape.    
+    After passing a pavilion, you’ll begin a sharp descent on an uneven stone and dirt path. This very last stage of the trail is mostly shaded and can be slippery at times. Once you’ve exited the trail and cleared the village houses, a beach popular with surfers lies waiting. 
+</p>
+<a href="https://en.wikipedia.org/wiki/Dragon%27s_Back"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Tergo La Trek</h1>
+    <img src = "latrek.jpg" alt="Tergo La Trek" style="width:40%;">
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14172.752200893496!2d89.33785912068899!3d27.369841932677126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e17765d9a37885%3A0xebc12d1bd05f03da!2sChele%20La!5e0!3m2!1sen!2sbd!4v1621799419520!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>
+        The relative inaccessibility of Bhutan and need for tourist passes means its trails are unspoiled and ripe for exploration. Tergo-La Trek, in the Haa Valley, is one of the country's lesser known routes.
+        This guided trek from Bhutanese tour operator Blue Poppy rises from 3,500 meters to 4,135 meters, passing through peaceful forest paths and up wild mountain tracks, with views of Kanchenjunga, the third highest peak in the world.
+        Yak herders' camps and distant villages add to the sense of being in another world.
+        Tergo is the name for a series of forklift trucks from the Swedish manufacturer Atlet AB. In the 80’s Atlet AB was pioneering[1] in ergonomics and operator-centric development of trucks, following the idea that optimal operative efficiency is best created by first optimizing operator’s environment. The result of this philosophy was the Atlet Tergo® trucks that ever since have been manufactured in a variety of models and variants.
+    </p>
+        <a href="https://en.wikipedia.org/wiki/Takling_La"><h3>For more details</h3></a>
+    </div>
+<div>
+    <h1>Routeburn Track</h1>
+    <img src = "Routeburn Track.jpg" alt="Routeburn Track" style="width:40%;">   
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.9845229278512!2d168.17907041521144!3d-44.76073037007115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d5be5c71b91b5b%3A0xd1dd2fae25264510!2sRouteburn%20Track%2C%20Otago%2C%20New%20Zealand!5e0!3m2!1sen!2sbd!4v1621799497693!5m2!1sen!2sbd" width=100%  height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>While the Routeburn Track may be a shorter multi-day hike, it has some of the biggest scenery. With soaring mountain peaks, huge valleys, waterfalls and jewel-like lakes the track links the Mount Aspiring National Park with Fiordland National Park.The highest point of the track is 1,255 metres above sea level - so the views are simply spectacular. 
+        The part of New Zealand that the Routeburn Track winds through has been shaped by successive glaciations into fiords, rocky coasts, towering cliffs, lakes and waterfalls. Birdlife is prolific through forested sections of the track; native tomtits, robins, fantails, wood pigeons and bellbirds are commonly seen, as well as the cheeky Kea, the world's only alpine parrot. 
+        
+        This is not a loop track and can be walked in either direction; one track end is at the Routeburn Shelter (near Glenorchy) and the other is at The Divide (closer to Te Anau). It is recommended that this track is avoided between May - September, when there is high risk of avalanches. 
+    The walk is not a circuit, so transport needs to be organised at either end. Shuttles and buses are easy to book in advance. One end of the track begins near Queenstown, where there are plentiful options for accommodation. </p>
+    <a href="https://en.wikipedia.org/wiki/St._Martin%27s_Island"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Pays Dogon</h1>
+    <img src = "Pays Dogon.jpg" alt="Pays Dogon" style="width:40%;">
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31653798.407885216!2d-21.255021300000028!3d14.427793800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe3bb0e8510d6d1b%3A0x79b9b2a9a52108bc!2sBandiagara%20Escarpment!5e0!3m2!1sen!2sbd!4v1621799563514!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>
+        Africa may not be on the top of most people’s list of places to hike, but this hidden gem is sure to please your inner Indiana Jones. This trail is set in the plains of West Africa and passes through the majestic Bandiagara Escarpment and abandoned cliff dwellings (very similar looking to Mesa Verde). The exotic natural beauty of the area will surely please your eyes, but the warm people will make the most lasting impression.
+        Partant du fleuve Niger en direction du sud-est, vers le Burkina Faso, on rencontre successivement trois types de paysages : plateau, falaise et plaine.
+    </p>
+    <a href="https://fr.wikipedia.org/wiki/Pays_Dogon"><h3>For more details</h3></a>
+</div>
+<div>
+<h1>Great Wall of China</h1>
+<img src = "The Great Wall of China.jpg" alt="Great Wall of China" style="width:40%;"> 
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.958773988406!2d116.56818621476293!3d40.43191176264121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f121d7687f2ccf%3A0xd040259b950522df!2sGreat%20Wall%20of%20China!5e0!3m2!1sen!2sbd!4v1621799624207!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>
+The Great Wall of China is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe. Several walls were built from as early as the 7th century BC,with selective stretches later joined together by Qin Shi Huang (220–206 BC), the first emperor of China. Little of the Qin wall remains.
+Apart from defense, other purposes of the Great Wall have included border controls, allowing the imposition of duties on goods transported along the Silk Road, regulation or encouragement of trade and the control of immigration and emigration.Furthermore, the defensive characteristics of the Great Wall were enhanced by the construction of watchtowers, troop barracks, garrison stations, signaling capabilities through the means of smoke or fire, and the fact that the path of the Great Wall also served as a transportation corridor. 
+he frontier walls built by different dynasties have multiple courses. Collectively, they stretch from Liaodong in the east to Lop Lake in the west, from the present-day Sino–Russian border in the north to Tao River (Taohe) in the south; along an arc that roughly delineates the edge of the Mongolian steppe. A comprehensive archaeological survey, using advanced technologies, has concluded that the walls built by the Ming dynasty measure 8,850 km (5,500 mi).
+</p>
+<a href="https://en.wikipedia.org/wiki/Great_Wall_of_China"><h3>For more details</h3></a>
+</div>
+<br>
+<br>
+<a href="index.html"><h3>Back to Home Page</h3></a>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+    color:rgba(5, 156, 43, 0.568);
+}
+a{
+    text-align: center;
+}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+h2{
+  text-align: center;
+  color:rgba(5, 156, 43, 0.932);
+}
+</style>
+</head>
+<body>
+<div>
+    <h2>Bangladesh Adventure Palces</h2>
+
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 10</div>
+        <img src="/images/sundarban.jpg" style="width:100%; height:50%">
+      <div class="text">Sundarbans Mangrove Froest</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 10</div>
+        <img src="/images/Saka_Haphong.jpg" style="width:100%; height:50%">
+      <div class="text">Saka Haphong</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 10</div>
+        <img src="/images/Maithaijama_Haphong.JPG" style="width:100%; height:50%">
+      <div class="text">Maithaijama Haphong</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 10</div>
+        <img src="/images/srimongol.jpg" style="width:100%; height:50%">
+      <div class="text">Sreemangal</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 10</div>
+      <img src="/images/kuakata.jpg" style="width:100%; height:50%">
+      <div class="text">Kuakata</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 10</div>
+      <img src="/images/Zow_Tlang.JPG" style="width:100%; height:50%">
+      <div class="text">Zow Tlang</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 10</div>
+      <img src="/images/Keokradong.jpg" style="width:100%; height:50%">
+      <div class="text">Keokradong</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 10</div>
+      <img src="/images/saint martin.jpg" style="width:100%; height:50%">
+      <div class="text">St. Martin's Island</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 10</div>
+        <img src="/images/Mukhra_Thuthai_Haphong.jpg" style="width:100%; height:50%">
+      <div class="text">Mukhra Thuthai Haphong</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 10</div>
+      <img src="/images/Thingdawl_Te_Tlang.jpg" style="width:100%; height:50%">
+      <div class="text">Thingdawlte Tlang</div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+    </script>
+    
+</div>
+<div>
+<h1 >Sundarbans Mangrove Froest</h1>
+<img src="/images/sundarban.jpg" alt="Sundarbans" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946889.9059687905!2d88.72646031728428!3d22.019405955649994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a004caac2c7b315%3A0x4716abcfbb16c93c!2sSundarbans!5e0!3m2!1sen!2sbd!4v1621784992167!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>The Sundarbans is a mangrove area in the delta formed by the confluence of Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh. It comprises closed and open mangrove forests, agriculturally used land, mudflats and barren land, and is intersected by multiple tidal streams and channels. Four protected areas in the Sundarbans are enlisted as UNESCO World Heritage Sites, viz Sundarbans National Park, Sundarbans West, Sundarbans South and Sundarbans East Wildlife Sanctuaries.The Sundarbans mangrove forest covers an area of about 10,000 km2 (3,900 sq mi), of which forests in Bangladesh's Khulna Division extend over 6,017 km2 (2,323 sq mi) and in West Bengal, they extend over 4,260 km2 (1,640 sq mi) across the South 24 Parganas and North 24 Parganas districts.The most abundant tree species are sundri (Heritiera fomes) and gewa (Excoecaria agallocha). The forests provide habitat to 453 faunal wildlife, including 290 bird, 120 fish, 42 mammal, 35 reptile and eight amphibian species.</p>
+
+<a href="https://en.wikipedia.org/wiki/Sundarbans"><h3>For more details</h3></a>
+</div>
+<br>
+<div>
+<h1>Saka Haphong</h1>
+<img src="/images/Saka_Haphong.jpg" alt="Saka Haphong" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29638.72796100523!2d92.59248037952253!3d21.786414077929695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b27cd799e3cb33%3A0x2a5b8ee30331d22d!2sSaka%20Haphong!5e0!3m2!1sen!2sbd!4v1621786727942!5m2!1sen!2sbd" width= 100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>Unofficially the highest peak of Bangladesh is Saka Haphong at Mowdok range.on the border with Myanmar.The location he recorded, 21°47′11″N 92°36′36″E, accurately matches the location given by Russian topographic mapping and SRTM data, although these sources show its height to be slightly lower, at 1,052 meters.Recently two trekking clubs counted the height of "Saka Haphong" as 3,488 and 3,461 feet, respectively.It the highest mountain in Bangladesh exceeding the height of Keokaradong, which is 3,172 feet high.This peak is also known as Mowdok Taung (as per USGS Topo and Russian Topo map), Saka Haphong (by local Tripura tribes).</p>
+<a href="https://en.wikipedia.org/wiki/Saka_Haphong"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Maithaijama Haphong</h1>
+    <img src = "/images/Maithaijama_Haphong.JPG" alt="Maithaijama Haphong" style="width:40%;"> 
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14795.898622428833!2d92.58884161886876!3d22.012282061180233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b285385f5f4023%3A0x854c35353db97769!2sMaithai%20jama%20Haphong!5e0!3m2!1sen!2sbd!4v1621786964975!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>Located at the south-eastern part of Chittagong hill tracts between Bangladesh-India border area, Maithaijama Haphong is the sixth-highest peak of Bangladesh. But it is not officially recognized according to the Bangladesh government. This peak is also the second-highest peak of Reng Tlang range after Dumlong. In 2014, 7 December Fahim Hasan from Dhaka, member of an adventure team BD Explorer with the helps of the local villagers summited the peak of Maithai jama Haphong and measured this peak as 3,174 feet/967 meters by Garmin gps device for the first time. Exact Geo location of the highest point was N 22°00.714', E 92°35.863'."Maithai jam Haphong" name came from Tripura language, which means,"Bad hilly place for vegetation". According to Tripura language "Haphong" means hill. Stream(jhiri) route to summit & view from the peak is extraordinary.</p>
+    <a href="https://en.wikipedia.org/wiki/Maithai_jama_Haphong"><h3>For more details</h3></a>
+    </div>
+<div>
+<h1 >Sreemangal</h1>
+ <img src = "/images/srimongol.jpg" alt="Sreemangal" style="width:40%;">   
+ <br>
+ <section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29089.705773058864!2d91.6853627079319!3d24.304196642191155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37517a6c00000001%3A0x87ab45b920d2b522!2sSreemangal%20Tours!5e0!3m2!1sen!2sbd!4v1621787229814!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+ <p>Srimangal is the tea capital of Bangladesh, locate at at 24.3083°N 91.7333°E. It has 43,952 households and total area 450.74 km². It is bordered by Moulvibazar Sadar to the north, Tripura to the south, Kamalganj to the east and Chunarughat, Nabiganj and Bahubal to the west.You will find lush green tea gardens anywhere you go here.Cycling throgh the trails inside tea plantation here could be one of the best thing you can do in Bangladesh.</p>
+
+ <a href="https://en.wikipedia.org/wiki/Sreemangal_Upazila"><h3>For more details</h3></a>
+</div>
+<br>
+<div>
+    <h1>Kuakata</h1>
+    <img src = "/images/kuakata.jpg" alt="Kuakata" style="width:40%;">   
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118514.30095715036!2d90.10539678762383!3d21.8354653723968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aa62836f83b573%3A0x31e7fec84916471!2sKuakata%20Sea%20Beach!5e0!3m2!1sen!2sbd!4v1621787374994!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>Kuakata is a beach town known for its panoramic sea beach.It is in southeastern Bangladesh and is the number sizeable tourist destination in the country. Kuakata beach is a sandy expanse 18 kilometres (11 mi) long and 3 kilometres (1.9 mi) wide.From the beach one can have an unobstructed view of both sunrise and sunset over the Bay of Bengal.Kuakata is in Kalapara Upazila, Patuakhali District.It is about 320 kilometres (200 mi) south of Dhaka, the capital, and about 70 kilometres (43 mi) from the district headquarters.</p>
+    <a href="https://en.wikipedia.org/wiki/Kuakata"><h3>For more details</h3></a>
+</div>
+<div>
+<h1> Zow Tlang</h1>
+<img src = "/images/Zow_Tlang.JPG" alt="Zow Tlang" style="width:40%;">
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14831.092303358122!2d92.59483331876827!3d21.672683111366435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b27ac129cb083d%3A0xbefb3f6986fc30e2!2sMowdok%20Mual!5e0!3m2!1sen!2sbd!4v1621790639710!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p> Zow Tlang is guarding the eastern horizon of Bangladesh and Myanmar border. In Bawm language the term Zow means Mizo (Mizo is derived from Mizoram, India. Probable reason is that Bangladesh was a part of greater India before 1947) and Tlang means Mountain. According to American and Russian topographic maps Zow Tlang is mentioned as Mowdok Mual. As per Bangla Trek, it is the second-highest peak of the country; though it is not officially recognized by the government till date.[5] Many accomplished local adventurers describe this as one of the most wildest peak of Bangladesh. </p>
+<a href="https://en.wikipedia.org/wiki/Zow_Tlang"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Keokradong</h1>
+    <img src = "/images/Keokradong.jpg" alt="Keokradong" style="width:40%;">
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.597803334938!2d92.51240571426194!3d21.95000816106713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b283c4093c8dd3%3A0x437b6b3e8406b513!2sKeokradong%20Peak!5e0!3m2!1sen!2sbd!4v1621791796706!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>Although it is widely reported to be the highest point in Bangladesh at 1,230 meters,recent SRTM data, GPS readings and Russian topographic mapping show that its true height is less than 1,000 meters.
+
+        On the top of Keokradong there is a small shelter and a signboard put up by the Bangladeshi military proclaiming the altitude to be 3172 feet. Garmin GPS recorded 974 meters (3196 feet) at this location, a different team measured 986m with 3m accuracy by GPS,a measurement consistent with Russian topographic mapping and SRTM data. It is at 21°57′00″N 92°30′53″E. USGS and Russian mapping dispute the claim that this is the location correctly named Keokradong; they show Keokradong at an 883m summit further north. </p>
+        <a href="https://en.wikipedia.org/wiki/Keokradong"><h3>For more details</h3></a>
+    </div>
+<div>
+    <h1>St. Martin's Island</h1>
+    <img src = "/images/saint martin.jpg" alt="St. Martin's Island" style="width:40%;">   
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59753.00049106874!2d92.29195190706754!3d20.605915515863423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ae2363dee2d61b%3A0xfb3463713589d312!2sSt.%20Martin&#39;s%20Island!5e0!3m2!1sen!2sbd!4v1621791987826!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>St. Martin's Island is a small island (area only 36 km2) in the northeastern part of the Bay of Bengal, about 9 km south of the tip of the Cox's Bazar-Teknaf peninsula, and forming the southernmost part of Bangladesh. There is a small adjoining island that is separated at high tide, called Chera Dwip. It is about 8 kilometres (5 miles) west of the northwest coast of Myanmar, at the mouth of the Naf River.The island is all about sun, sea and palm trees. During the day, it comes alive with water and beach sports, with beach parties and bonfires lighting up the evening skies. </p>
+    <a href="https://en.wikipedia.org/wiki/St._Martin%27s_Island"><h3>For more details</h3></a>
+</div>
+<div>
+    <h1>Mukhra Thuthai Haphong</h1>
+    <img src = "/images/Mukhra_Thuthai_Haphong.jpg" alt="Mukhra Thuthai Haphong" style="width:40%;">
+    <br>
+    <section id="contact" class="contact">
+
+      <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14799.152873415453!2d92.59483601885945!3d21.98108976581766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b28575ddab3005%3A0x29edff40e194bc7f!2sMukhra%20Thuthai%20Haphong!5e0!3m2!1sen!2sbd!4v1621793471610!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+      <div class="row">
+      
+      
+      
+      <div class="contact-form-container">
+      
+        <form action="">
+      
+          
+        </form>
+      
+      </div>
+      
+      </div>
+      
+      </section>
+      <br>
+      <br>
+    <p>Mukhra Thuthai Haphong is a significant border peak of Bangladesh, situated at the southern part of Belaichori of Rangamati Hill District. In April 2013, Fahim Hasan of BD Explorer summited and measured this peak for the first time. Elevation measured at 953.6 meters (3,129 ft). The name of the peak was collected by BD Explorer and confirmed by the local tribal people of Dhupanichora village. The name Mukhra Thuthai Haphong came from the Tripura language. Nearest settlement is known as Dhupanichora para. The easiest route to summit this peak is to start from Ruma of Bandarban district. </p>
+    <a href="https://en.wikipedia.org/wiki/Mukhra_Thuthai_haphong"><h3>For more details</h3></a>
+</div>
+<div>
+<h1>Thingdawlte Tlang</h1>
+<img src = "/images/Thingdawl_Te_Tlang.jpg" alt="Thingdawlte Tlang" style="width:40%;"> 
+<br>
+<section id="contact" class="contact">
+
+  <h1 class="heading"><span>D</span>irection: </h1>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14806.534108281823!2d92.58087511883838!3d21.910183526338564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b2866871aa7f93%3A0x167f3a36afd5d369!2sThingdawlte%20Tlang!5e0!3m2!1sen!2sbd!4v1621793552077!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+  <div class="row">
+  
+  
+  
+  <div class="contact-form-container">
+  
+    <form action="">
+  
+      
+    </form>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  <br>
+  <br>
+<p>Thingdawlte Tlang is a significant peak of Bangladesh. This peak is the highest point of 'lawmbok Row' range and possible seventh-highest of the country. In December 2012 a local explorer Fahim Hasan of "BD Explorer" summitted the peak of Thingdawlte Tlang and measured the height for the first time, which is 3149 feet(959.8 m). GPS accuracy was 3m(+/-). The name of the peak was collected by BD Explorer and confirmed by the local tribal people of Thingdawlte village. Few days later Zaqiul Deep of "Travelers Of Bangladesh" measured this peak as 3,133 feet(955m). The most easiest route to summit this peak is to start from Ruma of Bandarban district. Nearest settlement is known as Thingdawlte (Bawm) village. This peak is named after this village. </p>
+<a href="https://en.wikipedia.org/wiki/Thingdawl_Te_Tlang"><h3>For more details</h3></a>
+</div>
+<br>
+<br>
+<a href="index.html"><h3>Back to Home Page</h3></a>
+
+</body>
+</html>

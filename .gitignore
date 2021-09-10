@@ -1,4 +1,5 @@
 node_modules
+changed_IP
 
 .env
 .env.local

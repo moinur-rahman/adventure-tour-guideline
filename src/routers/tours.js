@@ -1,14 +1,24 @@
 const express = require("express");
-const User = require("../models/user");
 const router = new express.Router();
-const validator = require("validator");
 
-router.get("/tours",(req,res)=>{
-    res.render("tours")
-})
+router.get("/tours", (req, res) => {
+  res.render("tours");
+});
 
-router.get("/bangladesh",(req,res)=>{
-    res.render("HomePage1/bangladesh/bangladesh")
-})
+router.get("/geographical", (req, res) => {
+  res.render("HomePage1/GEOGRAPHICAL-PLACES/geographical");
+});
 
-module.exports = router
+router.get("/tracking", (req, res) => {
+  res.render("HomePage1/TRACKING/TRACKING");
+});
+
+router.get("/river", (req, res) => {
+  res.render("HomePage1/River/River");
+});
+
+router.get("/bangladesh", (req, res) => {
+  res.render("HomePage1/bangladesh/bangladesh");
+});
+
+module.exports = router;

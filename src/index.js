@@ -10,6 +10,8 @@ const travelRouter = require('./routers/travel')
 const galleryRouter = require('./routers/gallery')
 const reviewRouter = require("./routers/review")
 const contactRouter = require("./routers/contact")
+const footerRouter = require("./routers/footer")
+const adminRouter = require("./routers/admin")
 
 const hbs = require("hbs");
 
@@ -38,6 +40,8 @@ app.use(travelRouter)
 app.use(galleryRouter)
 app.use(reviewRouter)
 app.use(contactRouter)
+app.use(footerRouter)
+app.use(adminRouter)
 
 app.listen(port, () => {
   console.log("Server is up on port 3000!");

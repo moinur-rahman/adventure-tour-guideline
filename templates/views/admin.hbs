@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/admin.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon"></span>
+            <span class="title">
+              <div class="brand-name">
+                <h2>Adventure Tour</h2>
+                <h2>Guideline</h2>
+              </div>
+              
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/admin">
+            <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/admin/user">
+            <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+            <span class="title">Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="/admin/contactMessage">
+            <span class="icon"><i class="fa fa-comment" aria-hidden="true"></i></span>
+            <span class="title">Contact Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fas fa-question-circle"></i></span>
+            <span class="title">Help</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+            <span class="title">Sign Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here" />
+            <i class="fa fa-search"></i>
+          </label>
+        </div>
+        <div class="user">
+          <img src="./moin.jpg" />
+        </div>
+      </div>
+      {{#if dash}}
+      {{>adminDash}}
+      {{else if userRender}}
+      {{>adminUser this}}
+      {{/if}}
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const toggle = document.querySelector(".toggle");
+      const navigation = document.querySelector(".navigation");
+      const main = document.querySelector(".main");
+      toggle.classList.toggle("active");
+      navigation.classList.toggle("active");
+      main.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

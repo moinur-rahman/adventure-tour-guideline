@@ -1,0 +1,35 @@
+<div class="details">
+  <div class="recentOrders">
+    <div class="cardHeader">
+      <h2>Users List</h2>
+      <a href="#" class="btn">View All</a>
+    </div>
+    <table class="adminContactTable">
+      <thead>
+        <tr>
+          <td class="adminContactData">Email</td>
+          <td class="adminContactData">Name</td>
+          <td class="adminContactData">Subject</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each contact}}
+          {{#with this}}
+            <tr>
+              <td class="adminContactData">{{email}}</td>
+              <td class="adminContactData">{{firstName}} {{lastName}}</td>
+              <td class="adminContactData">{{subject}}</td>
+              <td class="adminContactData"><a href="contactMessage/{{_id}}">View<i class="fas fa-eye"></i></a></td>
+              <td class="adminContactData"><a
+                  href="user/delete/{{_id}}"
+                  type="button"
+                ><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+          {{/with}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  
+</div>

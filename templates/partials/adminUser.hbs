@@ -1,38 +1,39 @@
 <div class="details">
-    <div class="recentOrders">
-        <div class="cardHeader">
-            <h2>Users List</h2>
-            <a href="#" class="btn">View All</a>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <td class="userAdmin">Email</td>
-                    <td class="userAdmin">Name</td>
-                    <td class="userAdmin">Password</td>
-                    <td class="userAdmin"></td>
-                    <td class="userAdmin"></td>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each user}}
-                {{#with this}}
-                <tr>
-                    <td class="userAdmin">{{email}}</td>
-                    <td class="userAdmin">{{name}}</td>
-                    <td class="userAdmin">{{password}}</td>
-                    <td class="userAdmin"><a href="user/edit/{{_id}}">Edit<i class="fas fa-edit"></i></a></td>
-                    <td class="userAdmin"><a href="user/delete/{{_id}}" type="button"><i class="fas fa-trash"></i></a></td>
-                </tr>
-                {{/with}}
-                {{/each}}
-            </tbody>
-        </table>
+  <div class="recentOrders">
+    <div class="cardHeader">
+      <h2>Users List</h2>
+      <a href="#" class="btn">View All</a>
     </div>
-    <div class="recentCustomers">
-        <div class="cardHeader">
-            <h2>Recent Customers</h2>
-        </div>
-        
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <td class="adminUserData">Email</td>
+          <td class="adminUserData">Name</td>
+          <td class="adminUserData">Password</td>
+          <td class="adminUserData"></td>
+          <td class="adminUserData"></td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each user}}
+          {{#with this}}
+            <tr>
+              <td class="adminUserData">{{email}}</td>
+              <td class="adminUserData">{{name}}</td>
+              <td class="adminUserData">{{password}}</td>
+              <td class="adminUserData"><a href="user/edit/{{_id}}">Edit<i
+                    class="fas fa-edit"
+                  ></i></a></td>
+              <td class="adminUserData"><a
+                  href="user/delete/{{_id}}"
+                  type="button"
+                ><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+          {{/with}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  
 </div>

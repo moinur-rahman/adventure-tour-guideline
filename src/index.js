@@ -12,6 +12,7 @@ const reviewRouter = require("./routers/review")
 const contactRouter = require("./routers/contact")
 const footerRouter = require("./routers/footer")
 const adminRouter = require("./routers/admin")
+const profileRouter = require("./routers/profile")
 
 const hbs = require("hbs");
 
@@ -42,6 +43,7 @@ app.use(reviewRouter)
 app.use(contactRouter)
 app.use(footerRouter)
 app.use(adminRouter)
+app.use(profileRouter)
 
 app.listen(port, () => {
   console.log("Server is up on port 3000!");

@@ -1,0 +1,63 @@
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Users Details</h2>
+            <a href="#" class="btn">View All</a>
+        </div>
+
+        <table class="adminUserEditTable">
+
+            <tbody>
+                {{#with user}}
+                <tr>
+
+                    <td class="adminUserEditData"><b>Email : </b></td>
+                    <td class="adminUserEditData">{{email}}</td>
+
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Name : </b></td>
+                    <td class="adminUserEditData">{{name}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Password : </b></td>
+                    <td class="adminUserEditData">{{password}}</td>
+                </tr>
+
+
+                {{/with}}
+            </tbody>
+        </table>
+    </div>
+    <div class="adminUserEditUpdate">
+        <div class="cardHeader">
+            <h2>Update User</h2>
+        </div>
+        <form method="POST" action="/admin/user/edit/{{user._id}}">
+            <table class="adminUserEditTable">
+
+                <tbody>
+                    {{#with user}}
+                    <tr>
+
+                        <td class="adminUserEditData"><b>Email : </b></td>
+                        <td class="adminUserEditData"><input type="text" name="email"></td>
+
+                    </tr>
+                    <tr>
+                        <td class="adminUserEditData"><b>Name : </b></td>
+                        <td class="adminUserEditData"><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="adminUserEditData"><b>Password : </b></td>
+                        <td class="adminUserEditData"><input type="text" name="password"></td>
+                    </tr>
+
+
+                    {{/with}}
+                </tbody>
+            </table>
+            <button class="btn">Update</button>
+        </form>
+    </div>
+</div>

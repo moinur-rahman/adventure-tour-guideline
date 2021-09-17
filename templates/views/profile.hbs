@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/profile.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Adventure Tour Guideline</h1>
+            </div>
+            <div class="bars">
+                <span>
+                    <i class="fa fa-bars"> </i>
+                </span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <h3>Home</h3>
+                    </li>
+                    <li>
+                        <h3>About</h3>
+                    </li>
+                    <li>
+                        <h3>Contact</h3>
+                    </li>
+                    <li class="active">
+                        <h3>Account</h3>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="nav-mobile">
+            <ul>
+                <li>
+                    <span><i class="fa fa-house"></i></span>
+                    <h3>Home</h3>
+                </li>
+                <li>
+                    <span><i class="fa fa-address-card"></i></span>
+                    <h3>About</h3>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone-square-alt"></i></span>
+                    <h3>Contact</h3>
+                </li>
+                <li class="active">
+                    <span><i class="fa fa-user-circle"></i></span>
+                    <h3>Account</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="m-bar">
+            <span><i class="fa fa-ellipsis-v"></i></span>
+        </div>
+
+        <aside class="sidebar">
+            <h1>
+                Sidebar <span class="close"><i class="fa fa-times"></i></span>
+            </h1>
+            <div class="user-side">
+                <div class="user-pic">
+                    <img width="100" src="/images/download.jpg" alt="" />
+                </div>
+                <div class="user-info">
+                    <span class="name">Adventure Tour Guideline</span>
+                    <span class="mail">rahmanmoin27@gmail.com</span>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+            <div class="search">
+                <form action="">
+                    <div class="row">
+                        <input type="text" placeholder="Search Profile..." />
+                        <button type="submit">
+                            <span><i class="fa fa-search"></i></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="side-nav">
+                <h2>General</h2>
+                <nav>
+                    <ul>
+                        <li class="active" onclick="dash()">
+                            <span><i class="fab fa-dashcube"></i></span>
+                            <h3>Dashboard</h3>
+                        </li>
+                        <li onclick="review()">
+                            <span><i class="fa fa-star"></i></span>
+                            <h3>Reviews</h3>
+                        </li>
+                        <li onclick="show(2)">
+                            <span><i class="fa fa-comments"></i></span>
+                            <h3>Comments</h3>
+                        </li>
+                        <li onclick="show(3)">
+                            <span><i class="fa fa-cog"></i></span>
+                            <h3>Settings</h3>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bt-nav">
+                <ul>
+                    <li class="alert" title="Alert">
+                        <span><i class="fa fa-bell"></i></span>
+                    </li>
+                    <li class="message" title="Message">
+                        <span><i class="fa fa-envelope"></i></span>
+                    </li>
+                    <li class="set" title="Settings">
+                        <span><i class="fa fa-cog"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            {{#if profileDashRender}}
+            {{>profileDash}}
+            {{else if profileReviewsRender}}
+            {{>profileReviews}}
+            {{/if}}
+            
+
+            <section class="tabs">
+                <h1>Components</h1>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </section>
+            <section class="tabs">
+                <h1>Settings</h1>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </section>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="/js/profile.js"></script>
+</body>
+
+</html>

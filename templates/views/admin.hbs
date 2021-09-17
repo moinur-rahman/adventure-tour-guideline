@@ -23,7 +23,7 @@
                 <h2>Adventure Tour</h2>
                 <h2>Guideline</h2>
               </div>
-              
+
             </span>
           </a>
         </li>
@@ -82,13 +82,20 @@
           </label>
         </div>
         <div class="user">
-          <img src="./moin.jpg" />
+          <img src="" />
         </div>
       </div>
-      {{#if dash}}
+      {{#if dashRender}}
       {{>adminDash}}
       {{else if userRender}}
-      {{>adminUser this}}
+      {{>adminUser user = user}}
+      {{else if userEditRender}}
+      {{>adminUserEdit user = user}}
+      {{else if contactRender}}
+      {{>adminContact contact = contact}}
+      {{else if contactMessageRender}}
+      {{>adminContactMessage contact = contact}}
+
       {{/if}}
     </div>
   </div>

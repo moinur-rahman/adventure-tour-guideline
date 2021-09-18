@@ -1,0 +1,64 @@
+<section class="profile tabs" style="display: block;">
+    <h1>Your Contact Us Messages</h1>
+    {{#each contact}}
+    {{#with this}}
+    <table class="adminUserEditTable">
+       
+        <tbody>
+
+          
+            <tr>
+
+                <td class="adminUserEditData"><b>Email : </b></td>
+                <td class="adminUserEditData">{{email}}</td>
+
+            </tr>
+
+            <tr>
+                <td class="adminUserEditData"><b>Name : </b></td>
+                <td class="adminUserEditData">{{firstName}} {{lastName}}</td>
+            </tr>
+
+            <tr>
+                <td class="adminUserEditData"><b>Subject: </b></td>
+                <td class="adminUserEditData">{{subject}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Message: </b></td>
+                <td class="adminUserEditData">{{message}}</td>
+            </tr>
+            
+
+
+        </tbody>
+    </table>
+    <br>
+      <hr />
+      <br>
+    {{/with}}
+
+    {{/each}}
+</section>
+
+{{!--
+<div class="userpost">
+    <div class="posts">
+        <span><i class="fa fa-plus"></i></span>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+</div> --}}

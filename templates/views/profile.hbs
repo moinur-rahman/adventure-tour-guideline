@@ -23,19 +23,28 @@
                     <i class="fa fa-bars"> </i>
                 </span>
             </div>
+
             <div class="nav">
                 <ul>
-                    <li>
-                        <h3>Home</h3>
-                    </li>
-                    <li>
-                        <h3>About</h3>
-                    </li>
-                    <li>
-                        <h3>Contact</h3>
-                    </li>
-                    <li class="active">
-                        <h3>Account</h3>
+                    <a href="/">
+                        <li>
+                            <h3>Home</h3>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <h3>About</h3>
+                        </li>
+                    </a>
+                    <a class="logout" href="/">
+                        <li>
+                            <h3>Logout</h3>
+                        </li>
+                    </a>
+                    <a class="topBar-button" href="">
+                        <li class="active">
+                            <h3>Account</h3>
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -90,32 +99,27 @@
             </div>
             <div class="side-nav">
                 <h2>General</h2>
-                <nav> 
+                <nav>
                     <ul>
                         <li class="active">
-                            <a href="/profile">
+                            <a class="sidebar-button" href="/profile">
                                 <span><i class="fab fa-dashcube"></i></span>
                                 <h3>Payment History</h3>
                             </a>
                         </li>
                         <li>
-                            <a href="/profile/settings">
-                                <span><i class="fa fa-star"></i></span>
-                                <h3>Settings</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span><i class="fa fa-comments"></i></span>
-                                <h3>Comments</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
+                            <a class="sidebar-button" href="/profile/settings">
                                 <span><i class="fa fa-cog"></i></span>
                                 <h3>Settings</h3>
                             </a>
                         </li>
+                        <li>
+                            <a class="sidebar-button" href="/profile/contactMessage">
+                                <span><i class="far fa-envelope"></i></span>
+                                <h3>Contact Message</h3>
+                            </a>
+                        </li>
+                       
                     </ul>
                 </nav>
             </div>
@@ -135,9 +139,11 @@
         </aside>
         <div class="main">
             {{#if profilePaymentRender}}
-            {{>profilePayment}}
+            {{>profilePayment payment=payment}}
             {{else if profileSettingsRender}}
-            {{>profileSettings}}
+            {{>profileSettings user = user}}
+            {{else if profileContactRender}}
+            {{>profileContact contact = contact}}
             {{/if}}
 
 

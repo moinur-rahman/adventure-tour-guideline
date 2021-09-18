@@ -1,24 +1,87 @@
 <section class="profile tabs" style="display: block;">
-                <h1>Your Posts</h1>
-                <div class="userpost">
-                    <div class="posts">
-                        <span><i class="fa fa-plus"></i></span>
-                    </div>
-                    <div class="posts">
-                        <img width="200" src="/images/download.jpg" alt="" />
-                        <p>Title or Name</p>
-                    </div>
-                    <div class="posts">
-                        <img width="200" src="/images/download.jpg" alt="" />
-                        <p>Title or Name</p>
-                    </div>
-                    <div class="posts">
-                        <img width="200" src="/images/download.jpg" alt="" />
-                        <p>Title or Name</p>
-                    </div>
-                    <div class="posts">
-                        <img width="200" src="/images/download.jpg" alt="" />
-                        <p>Title or Name</p>
-                    </div>
-                </div>
-            </section>
+    <h1>Your Payments</h1>
+    {{#each payment}}
+    {{#with this}}
+    <table class="adminUserEditTable">
+       
+        <tbody>
+
+          
+            <tr>
+
+                <td class="adminUserEditData"><b>Email : </b></td>
+                <td class="adminUserEditData">{{email}}</td>
+
+            </tr>
+
+            <tr>
+                <td class="adminUserEditData"><b>Name : </b></td>
+                <td class="adminUserEditData">{{fullName}}</td>
+            </tr>
+
+            <tr>
+                <td class="adminUserEditData"><b>Address: </b></td>
+                <td class="adminUserEditData">{{address}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>City: </b></td>
+                <td class="adminUserEditData">{{city}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>State: </b></td>
+                <td class="adminUserEditData">{{state}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Zip: </b></td>
+                <td class="adminUserEditData">{{zip}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Phone Number: </b></td>
+                <td class="adminUserEditData">{{phoneNo}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Transaction ID: </b></td>
+                <td class="adminUserEditData">{{tnxID}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Expiry Month: </b></td>
+                <td class="adminUserEditData">{{expMonth}}</td>
+            </tr>
+            <tr>
+                <td class="adminUserEditData"><b>Expiry Year: </b></td>
+                <td class="adminUserEditData">{{expYear}}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    <br>
+      <hr />
+      <br>
+    {{/with}}
+
+    {{/each}}
+</section>
+
+{{!--
+<div class="userpost">
+    <div class="posts">
+        <span><i class="fa fa-plus"></i></span>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+    <div class="posts">
+        <img width="200" src="/images/download.jpg" alt="" />
+        <p>Title or Name</p>
+    </div>
+</div> --}}

@@ -16,30 +16,36 @@ router.get("/login", (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  console.log(req.query);
+  //console.log(req.query);
 
   const { email, password } = req.body;
 
   try {
     const user = await User.findOne({ email });
+   // const token = await user.generateAuthToken();
+    
     if (!user) {
       return res.render("HomePage1/registration/login", {
         errorMessage: "You are not registered",
       });
     }
-    console.log(user);
+    //console.log(user);
 
     if (user.password !== password) {
       return res.render("HomePage1/registration/login", {
         errorMessage: "Your password is wrong",
       });
     }
-
+    
+   // res.send({ user, token });
     res.render("HomePage1/registration/success",{
       message:"Login successful",
+       user:JSON.stringify(user)
     })
   } catch (error) {}
 });
+
+
 
 router.get("/registration", (req, res) => {
   res.render("HomePage1/registration/registration");
@@ -74,10 +80,13 @@ router.post("/registration", async (req, res) => {
     password,
   });
   try {
-    await user.save();
-    res.render("HomePage1/registration/success",{
-      message:"Registration successful",
-    })
+    const savedUser = await user.save();
+    
+   // const token =await user.generateAuthToken()
+    res.render("HomePage1/registration/success", {
+      message: "Registration successful",
+      user:JSON.stringify(savedUser)
+    });
   } catch (error) {
     console.log("Error detected");
   }

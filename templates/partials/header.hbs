@@ -1,46 +1,75 @@
 <nav class="colorlib-nav" role="navigation">
-			<div class="top-menu">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="colorlib-logo"><a class="animated infinite heartBeat navbar-brand" href="/">Adventure Tour</a></div>
-						</div>
-						<div class="col-xs-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="/">Home</a></li>
-								<li class="has-dropdown">
-									<a href="/tours">Tours</a>
-									<ul class="dropdown">
-										<li><a href="/bangladesh"><i class="fa fa-circle"></i>Bangladesh</a></li>
-										<li><a href="/geographical"><i class="fa fa-circle"></i>Geographical Places</a></li>
-										<li><a href="/tracking"><i class="fa fa-circle"></i>Tracking</a></li>
-										<li><a href="/river"><i class="fa fa-circle"></i>Prominent Rivers</a></li>
-									</ul>
-								</li>
-								<li class="has-dropdown">
-									<a href="/tours">Travel</a>
-									<ul class="dropdown">
+	<div class="top-menu">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="colorlib-logo"><a class="animated infinite heartBeat navbar-brand" href="/">Adventure
+							Tour</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="/">Home</a></li>
+						<li class="has-dropdown">
+							<a href="/tours">Tours</a>
+							<ul class="dropdown">
+								<li><a href="/bangladesh"><i class="fa fa-circle"></i>Bangladesh</a></li>
+								<li><a href="/geographical"><i class="fa fa-circle"></i>Geographical Places</a></li>
+								<li><a href="/tracking"><i class="fa fa-circle"></i>Tracking</a></li>
+								<li><a href="/river"><i class="fa fa-circle"></i>Prominent Rivers</a></li>
+							</ul>
+						</li>
+						<li class="has-dropdown">
+							<a href="/tours">Travel</a>
+							<ul class="dropdown">
 								<li><a href="/hotels"><i class="fa fa-circle-o-notch"></i>Travel Style</a></li>
 								<li><a href="/hotels"><i class="fa fa-crosshairs"></i>Travel Type</a></li>
 								<li><a href="/hotels"><i class='fas fa-hotel'></i>Hotels</a></li>
-								</ul>
-								</li>
-								<li class="has-dropdown">
-									<a href="/tours">Gallery</a>
-									<ul class="dropdown">
+							</ul>
+						</li>
+						<li class="has-dropdown">
+							<a href="/tours">Gallery</a>
+							<ul class="dropdown">
 								<li><a href="/blog"><i class="fa fa-btc"></i>Blog</a></li>
 								<li><a href="/blog"><i class="fa fa-picture-o"></i>Photos</a></li>
 								<li><a href="/videos"><i class="fa fa-video-camera"></i>videos</a></li>
 								<li><a href="/story"><i class="fa fa-book"></i>Short Stories</a></li>
-								</ul>
-								</li>
-								<li><a href="/services">Review</a></li>
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="/login">Log In</a></li>
-								<li><a href="/registration">Register</a></li>
 							</ul>
-						</div>
-					</div>
+						</li>
+						<li><a href="/services">Review</a></li>
+						<li><a href="/contact">Contact</a></li>
+
+						<li class="has-dropdown">
+							<a class="profile" href="/profile"></a>
+							<ul class="dropdown">
+								<li class="settings"><a>Settings</a></li>
+								<li class="logout">Logout</a></li>
+							</ul>
+						</li>
+
+						<li><a class="login" href="/login">Log In</a></li>
+						<li><a class="register" href="/registration">Register</a></li>
+
+
+
+					</ul>
 				</div>
 			</div>
-		</nav>
+		</div>
+	</div>
+</nav>
+<script>
+	const userData = JSON.parse(localStorage.getItem("userInfo"))
+	if (userData) {
+		document.querySelector(".login").textContent = ""
+		document.querySelector(".register").textContent = ""
+		const profile = document.querySelector(".profile")
+		profile.textContent = userData.name
+		profile.setAttribute("href", "/profile/" + userData._id)
+		document.querySelector(".settings a").setAttribute("href","/profile/settings/" + userData._id)
+	}
+	document.querySelector(".logout").addEventListener("click", () => {
+		localStorage.setItem("userInfo", null);
+		location.reload()
+	})
+
+</script>

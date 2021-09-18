@@ -3,13 +3,13 @@ const router = express.Router()
 
 router.get("/profile",async (req,res)=>{
     res.render("profile",{
-        profileDashRender:true
+        profilePaymentRender:true
     })
-})
+}) 
 
-router.get("/profile/reviews",async (req,res)=>{
+router.get("/profile/settings",async (req,res)=>{
    res.render("profile",{
-       profileReviewsRender:true
+       profileSettingsRender:true
    })
 })
 

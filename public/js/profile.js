@@ -9,13 +9,6 @@
 // }
 // show(0);
 
-const dash = () => {
-    window.location = "profile"
-}
-
-const review = () => {
-    window.location = "http://localhost:3000/profile/reviews"
-}
 
 $(".side-nav ul li").click(function () {
 $(this).addClass("active").siblings().removeClass("active");

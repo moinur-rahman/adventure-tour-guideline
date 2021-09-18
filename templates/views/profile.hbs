@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
@@ -90,23 +90,31 @@
             </div>
             <div class="side-nav">
                 <h2>General</h2>
-                <nav>
+                <nav> 
                     <ul>
-                        <li class="active" onclick="dash()">
-                            <span><i class="fab fa-dashcube"></i></span>
-                            <h3>Dashboard</h3>
+                        <li class="active">
+                            <a href="/profile">
+                                <span><i class="fab fa-dashcube"></i></span>
+                                <h3>Payment History</h3>
+                            </a>
                         </li>
-                        <li onclick="review()">
-                            <span><i class="fa fa-star"></i></span>
-                            <h3>Reviews</h3>
+                        <li>
+                            <a href="/profile/settings">
+                                <span><i class="fa fa-star"></i></span>
+                                <h3>Settings</h3>
+                            </a>
                         </li>
-                        <li onclick="show(2)">
-                            <span><i class="fa fa-comments"></i></span>
-                            <h3>Comments</h3>
+                        <li>
+                            <a href="">
+                                <span><i class="fa fa-comments"></i></span>
+                                <h3>Comments</h3>
+                            </a>
                         </li>
-                        <li onclick="show(3)">
-                            <span><i class="fa fa-cog"></i></span>
-                            <h3>Settings</h3>
+                        <li>
+                            <a href="">
+                                <span><i class="fa fa-cog"></i></span>
+                                <h3>Settings</h3>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -126,12 +134,12 @@
             </div>
         </aside>
         <div class="main">
-            {{#if profileDashRender}}
-            {{>profileDash}}
-            {{else if profileReviewsRender}}
-            {{>profileReviews}}
+            {{#if profilePaymentRender}}
+            {{>profilePayment}}
+            {{else if profileSettingsRender}}
+            {{>profileSettings}}
             {{/if}}
-            
+
 
             <section class="tabs">
                 <h1>Components</h1>

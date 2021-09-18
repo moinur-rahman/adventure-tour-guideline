@@ -229,7 +229,7 @@ aside .search button {
     margin-bottom: 10px;
 }
 
-.side-nav ul li {
+.side-nav ul li a{
     display: flex;
     width: 100%;
     position: relative;
@@ -239,12 +239,12 @@ aside .search button {
     transition: all .4s ease;
 }
 
-.side-nav ul li.active,
-.side-nav ul li:hover {
+.side-nav ul li a.active,
+.side-nav ul li a:hover {
     background: #eee;
 }
 
-.side-nav ul li span {
+.side-nav ul li a span {
     margin-right: 10px;
     font-size: 12px;
     width: 30px;
@@ -256,7 +256,7 @@ aside .search button {
     color: #fff;
 }
 
-.side-nav ul li h3 {
+.side-nav ul li a h3 {
     line-height: 30px;
     font-size: 1.2rem;
     color: var(--t-color);

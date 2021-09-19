@@ -9,6 +9,10 @@ router.get("/story",(req,res)=>{
     res.render("HomePage1/ShortStory/story")
 })
 
+router.get("/photos",(req,res)=>{
+    res.render("photos")
+})
+
 router.get("/videos",(req,res)=>{
     res.render("videos")
 })

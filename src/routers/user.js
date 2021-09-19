@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 // })
 
 router.get("/login", (req, res) => {
-  res.render("HomePage1/registration/login");
+  res.render("login");
 });
 
 router.post("/login", async (req, res) => {
@@ -25,20 +25,20 @@ router.post("/login", async (req, res) => {
    // const token = await user.generateAuthToken();
     
     if (!user) {
-      return res.render("HomePage1/registration/login", {
+      return res.render("login", {
         errorMessage: "You are not registered",
       });
     }
     //console.log(user);
 
     if (user.password !== password) {
-      return res.render("HomePage1/registration/login", {
+      return res.render("login", {
         errorMessage: "Your password is wrong",
       });
     }
     
    // res.send({ user, token });
-    res.render("HomePage1/registration/success",{
+    res.render("success",{
       message:"Login successful",
        user:JSON.stringify(user)
     })
@@ -48,14 +48,14 @@ router.post("/login", async (req, res) => {
 
 
 router.get("/registration", (req, res) => {
-  res.render("HomePage1/registration/registration");
+  res.render("registration");
 });
 
 router.post("/registration", async (req, res) => {
   const { name, email, password, repeatPassword } = req.body;
 
   if (!validator.isEmail(email)) {
-    return res.render("HomePage1/registration/registration", {
+    return res.render("registration", {
       errorMessage: "Email is not valid",
     });
   }
@@ -63,13 +63,13 @@ router.post("/registration", async (req, res) => {
   const duplicateUser = await User.findOne({ email });
 
   if (duplicateUser) {
-    return res.render("HomePage1/registration/registration", {
+    return res.render("registration", {
       errorMessage: "Email you entered already registered",
     });
   }
 
   if (password !== repeatPassword) {
-    return res.render("HomePage1/registration/registration", {
+    return res.render("registration", {
       errorMessage: "Password did not match",
     });
   }
@@ -83,7 +83,7 @@ router.post("/registration", async (req, res) => {
     const savedUser = await user.save();
     
    // const token =await user.generateAuthToken()
-    res.render("HomePage1/registration/success", {
+    res.render("success", {
       message: "Registration successful",
       user:JSON.stringify(savedUser)
     });

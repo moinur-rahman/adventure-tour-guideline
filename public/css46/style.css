@@ -295,7 +295,7 @@ h3.title_layout.two {
 
 @media (max-width: 1280px) {
   .banner_inner { 
-    background: url(../images/plane.jfif) no-repeat 0px -55px;
+    background: url(../images/plane.jfif) no-repeat 0px -55px; 
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;

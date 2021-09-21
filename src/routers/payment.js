@@ -96,7 +96,7 @@ router.post("/payment", async (req, res) => {
     await payment.save();
      await transporter.sendMail(mailOptions);
     
-    res.render("HomePage1/registration/success",{
+    res.render("success",{
       message:"Payment successful",
     })
 

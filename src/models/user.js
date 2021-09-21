@@ -24,14 +24,18 @@ const userSchema = mongoose.Schema({
     trim: true,
     minlength: 6,
   },
-  tokens: [
-    {
-      token: {
-        type: String,
-        require: true,
-      },
-    },
-  ],
+  isAdmin:{
+    type:Boolean,
+    default:false,
+  }
+  // tokens: [
+  //   {
+  //     token: {
+  //       type: String,
+  //       require: true,
+  //     },
+  //   },
+  // ],
 });
 
 userSchema.methods.generateAuthToken = async function () {

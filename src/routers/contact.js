@@ -16,7 +16,7 @@ router.post("/contact",async (req, res) => {
   
   try {
       await contact.save()
-      res.render("HomePage1/registration/success",{
+      res.render("success",{
           message:"Message sent successfully"
       })
   } catch (error) {

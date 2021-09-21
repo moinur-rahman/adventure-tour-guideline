@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/user");
 const router = new express.Router();
 const validator = require("validator");
+const { json } = require("body-parser");
 
 router.get("/", (req, res) => {
   res.render("HomePage");
@@ -48,7 +49,7 @@ router.post("/login", async (req, res) => {
 
 
 router.get("/registration", (req, res) => {
-  res.render("registration");
+  res.render("registration"); 
 });
 
 router.post("/registration", async (req, res) => {
@@ -91,5 +92,6 @@ router.post("/registration", async (req, res) => {
     console.log("Error detected");
   }
 });
+
 
 module.exports = router;

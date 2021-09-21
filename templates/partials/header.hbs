@@ -60,12 +60,15 @@
 <script>
 	const userData = JSON.parse(localStorage.getItem("userInfo"))
 	if (userData) {
-		document.querySelector(".login").textContent = ""
-		document.querySelector(".register").textContent = ""
+		document.querySelector(".login").style.display = "none"
+		document.querySelector(".register").style.display = "none"
 		const profile = document.querySelector(".profile")
 		profile.textContent = userData.name
 		profile.setAttribute("href", "/profile/" + userData._id)
 		document.querySelector(".settings a").setAttribute("href","/profile/settings/" + userData._id)
+	}
+	else{
+		document.querySelector(".profile").style.display = "none";
 	}
 	document.querySelector(".logout").addEventListener("click", () => {
 		localStorage.setItem("userInfo", null);

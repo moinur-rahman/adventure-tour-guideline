@@ -34,7 +34,7 @@
 			<div class="services-breadcrumb">
 				<div class="inner_breadcrumb">
 
-					<ul><li><h2 class="header"><a style="color:#ff4e00;" href="index.html">Home Page/</a>All of our Reviews</h2></li>
+					<ul><li><h2 class="header"><a style="color:#ff4e00;" href="/">Home Page/</a>All of our Reviews</h2></li>
 						<li></li>
 					</ul>
 					
@@ -52,18 +52,18 @@
 					<div class="col-md-4">
 						<h2 class="text-center postReview">Post a Review</h2>
 
-						<form class="p-2">
+						<form class="p-2" method="POST">
 							<div class="form-group">
 								<label for=""><b>Name</b></label>
-								<input type="text" class="form-control" id="exampleFormControlInput1"
-									placeholder="Enter name">
+								<input name="name" type="text" class="form-control" id="exampleFormControlInput1"
+									placeholder="Enter name" >
 								<br>
-								<label for=""><b>Upload Your Photo</b></label><br> <input type="file">
+								<label for=""><b>Upload Your Photo</b></label><br> <input name="userPhoto" type="file" >
 							</div>
 
 							<div class="form-group">
 								<label for="exampleFormControlInput1"><b>Email Address</b></label>
-								<input type="email" class="form-control" id="exampleFormControlInput1"
+								<input  name="email" type="email" class="form-control" id="exampleFormControlInput1"
 									placeholder="name@example.com">
 							</div>
 
@@ -71,12 +71,12 @@
 
 							<div class="form-group">
 								<label for="exampleFormControlSelect1"><b>Select Place</b></label>
-								<select class="form-control" id="exampleFormControlSelect1">
-									<option>Cox Bazar</option>
-									<option>Sundarban</option>
-									<option>Kaptai</option>
-									<option>Rangamati</option>
-									<option>Bandarban</option>
+								<select name="place" class="form-control" id="exampleFormControlSelect1">
+									<option value="Cox Bazar">Cox Bazar</option>
+									<option value="Sundarban">Sundarban</option>
+									<option value="Kaptai">Kaptai</option>
+									<option value="Rangamati">Rangamati</option>
+									<option value="Bandarban">Bandarban</option>
 								</select>
 							</div>
 
@@ -85,9 +85,9 @@
 
 								<div class="row">
 									<div class="col-8">
-										<input type="text" class="form-control" id="exampleFormControlInput1"
+										<input name="newPlace" type="text" class="form-control" id="exampleFormControlInput1"
 											placeholder="New place name"> <br>
-											<label for=""><b>New place's Photo</b></label> <input type="file">
+											<label for=""><b>New place's Photo</b></label> <input name="locationPhoto" type="file">
 									</div>
 									<div class="col-4">
 										<i class="fas fa-plus mt-2"></i>
@@ -100,25 +100,19 @@
 
 							<div class="form-group">
 								<label for="exampleFormControlTextarea1"><b>Write Review</b></label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								<textarea name="reviewMessage" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
 								<label for=""><b>Facebook Link</b></label>
-								<input type="text" class="form-control" id="exampleFormControlInput1"
+								<input name="fbLink" type="text" class="form-control" id="exampleFormControlInput1"
 									placeholder="Enter your Facebook link">
 							</div>
 
 							<div class="form-group">
 								<label for=""><b>Twitter Link</b></label>
-								<input type="text" class="form-control" id="exampleFormControlInput1"
+								<input name="twitterLink" type="text" class="form-control" id="exampleFormControlInput1"
 									placeholder="Enter your Twitter link">
-							</div>
-
-							<div class="form-group">
-								<label for=""><b>Gmail Link</b></label>
-								<input type="text" class="form-control" id="exampleFormControlInput1"
-									placeholder="Enter your Gmail link">
 							</div>
 
 							<button class="btn btn-danger">

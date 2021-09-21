@@ -37,6 +37,8 @@
 
   <script>
     const data = {{{ user }}}
+  
+    if(data)
     localStorage.setItem("userInfo", JSON.stringify(data));
 
     setTimeout(() => { window.location = "/"; }, 2000);

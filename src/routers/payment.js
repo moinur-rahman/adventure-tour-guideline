@@ -98,6 +98,9 @@ router.post("/payment", async (req, res) => {
     
     res.render("success",{
       message:"Payment successful",
+      user:JSON.stringify({
+        name:"payment"
+      })
     })
 
     // res.render("HomePage1/registration/success", {

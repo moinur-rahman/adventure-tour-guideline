@@ -30,7 +30,7 @@
       </div>
 
       <div class="col-md-3">
-      </div>
+      </div> 
 
     </div>
   </div>
@@ -38,7 +38,7 @@
   <script>
     const data = {{{ user }}}
   
-    if(data)
+    if(data.name !== "payment")
     localStorage.setItem("userInfo", JSON.stringify(data));
 
     setTimeout(() => { window.location = "/"; }, 2000);

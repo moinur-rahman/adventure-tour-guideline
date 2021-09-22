@@ -25,12 +25,12 @@
 
         <header>
         
-            <div class="header-banner">
-                <h1>Visit Kaptai</h1>
+            <div class="header-banner" style="background-image: url({{review.locationPhotoPath}});">
+                <h1>Visit {{review.place}}</h1>
             </div>
             <div class="clear"></div>
             <nav class="stick">
-                <div class="site-title">Kaptai</div>
+                <div class="site-title">{{place}}</div>
                 <ul >
                     <li><a href="/">Home</a></li>
                     <li><a href="/review">Review</a></li>
@@ -40,39 +40,17 @@
         </header>
              
         <section class="content">
+            {{#with review}}
             <article>
                 <div class="customerWrapper" style="display:block;height: 130px;margin-bottom: 5px;">
-                    <img src="/images46/team5.jpg" style="width: 115px;display:block;float:left;" alt=" " class="img-fluid rounded"><p class="placeName my-2"style="display:block;line-height: 5em;font-size: 25px;
-                ">Rizuan Robin</p>
+                    <img src={{userPhotoPath}} style="width: 115px;display:block;float:left;" alt=" " class="img-fluid rounded"><p class="placeName my-2"style="display:block;line-height: 5em;font-size: 25px;
+                ">{{name}}</p>
                 </div>
 
-                <p>Construction of the reservoir for the hydro-electric plant began in 1956 by the Government of East Pakistan.[2] As a result, 54,000 acres (220 km2) of farmland in the Rangamati District went underwater and created the lake. The hydro-electric project was funded by the United States. The project was finished in 1962. International Engineering Company and Utah International Inc. received the contract for construction of the dam. The dam is 670.8 meters long, and 54.7 meters high. The dam has a 745 feet (227 m) long spillway containing 16 gates. Through the spillway 5,250,000 cu ft/s (149,000 m3/s) of water can pass.</p>
-            <!--    <figure class="fig">
-                    <img src="images/kaptai2.jpg">
-                    <figcaption class="mt-2">Kaptai Lake</figcaption>
-                </figure>-->
-                
-                <p>Kaptai Lake is the largest lake in Bangladesh. It is located in the Kaptai Upazila under Rangamati District of Chittagong Division. The lake was created as a result of building the Kaptai Dam on the Karnaphuli River, as part of the Karnaphuli Hydro-electric project. The Kaptai Lake's average depth is 100 feet (30 m) and maximum depth is 490 feet (150 m).</p>
-                <p>The land that went underwater as a result of the dam construction, was 40% of the total arable land in the area. Along with that, 29 square miles (75 km2) of the Government-owned forest, and 234 square miles (610 km2) of other forest land went underwater. About 18,000 families with a total of almost 100 thousand people were also displaced. The palace of the king of the Chakmas was also flooded and is now underwater Kaptai Lake is the largest lake in Bangladesh.</p>
-                 <p> The lake was created as a result of building the Kaptai Dam on the Karnaphuli River, as part of the Karnaphuli Hydro-electric project.The Kaptai Lake's average depth is 100 feet (30 m) and maximum depth is 490 feet (150 m).
-                </p>   
-                <p>
-                    The 'H'-shaped Kaptai Lake has two arms, joined by a narrow gorge near Shubalong, a part of the old Karnafuli river. Kasalong, the right arm of the lake, is fed by two streams, the Mayni and the kasalong, in the north and laterally by the Karnafuli. The left arm, Rangamati-Kaptai is fed by two streams, the Chengi in the north and the Rinkhyong in the south. The Karnafuli forms three prominent loops one at Rangamati, one at Dhuliachhari and the other at Kaptai. The Rangamati and the Dhuliachhari loops are now under the reservoir of the earth-filled dam. The Kaptai Lake has drowned almost the whole of the middle-Karnafuli valley and the lower reaches of the Chengi, Kasalong and Rinkhyong rivers. The shoreline and the basin of Kaptai Lake are very irregular. Its important morphometric and hydrographic features are as follows: surface elevation 31.1m, surface area 58,300 ha, volume 524,700 cu m, total annual discharge 1,707,000 cu m, storage ratio 0.31, mean depth 9m, maximum depth 32m, outlet depth 15.5m, mean annual water level fluctuation 8.14m, growing season 365 days, total dissolved solids 76 ppm and specific conductance 144 mhos at 25°C.
-                </p>   
-                <p>
-                    The land that went underwater as a result of the dam construction, was 40% of the total arable land in the area. Along with that, 29 square miles (75 km2) of the Government-owned forest, and 234 square miles (610 km2) of other forest land went underwater. About 18,000 families with a total of almost 100 thousand people were also displaced. The palace of the king of the Chakmas was also flooded and is now underwater Kaptai Lake is the largest lake in Bangladesh.
-
-                    The lake was created as a result of building the Kaptai Dam on the Karnaphuli River, as part of the Karnaphuli Hydro-electric project.The Kaptai Lake's average depth is 100 feet (30 m) and maximum depth is 490 feet (150 m).
-                </p>
-                <p>
-                    Kaptai Lake the largest man-made freshwater body in Bangladesh. Though created primarily for hydroelectric power generation, it contributes to produce significant quantity of freshwater fishes, navigation, flood control and agriculture, etc. The reservoir was created by damming the river karnafuli near kaptai town in the chittagong hill tracts (Latitude 22°09'N and Longitude 92°17'E). The lake is confined within the hill district rangamati and embraces the upazilas of Rangamati Sadar, Kaptai, Nannerchar, Langadu, Baghaichhari, Barkal, Juraichhari and Belaichhari.
-                </p>
+                {{reviewMessage}}
                
             </article>
-                
-            <aside>
-             
-            </aside>
+            {{/with}}
         </section> 
         
     </body>

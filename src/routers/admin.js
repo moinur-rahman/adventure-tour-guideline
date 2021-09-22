@@ -1,6 +1,9 @@
 const express = require("express");
 const router = new express.Router();
+
+const Product = require("../models/product") 
 const User = require("../models/user");
+
 const Contact = require("../models/contact");
 
 router.get("/admin", (req, res) => {
@@ -41,28 +44,19 @@ router.post("/admin/user/edit/:id", async (req, res) => {
   const { email, name, password } = req.body;
 
   if (email) {
-    await User.findByIdAndUpdate(
-       req.params.id ,
-      {
-        email,
-      }
-    );
+    await User.findByIdAndUpdate(req.params.id, {
+      email,
+    });
   }
   if (name) {
-    await User.findByIdAndUpdate(
-       req.params.id ,
-      {
-        name,
-      }
-    );
+    await User.findByIdAndUpdate(req.params.id, {
+      name,
+    });
   }
   if (password) {
-    await User.findByIdAndUpdate(
-       req.params.id ,
-      {
-        password,
-      }
-    );
+    await User.findByIdAndUpdate(req.params.id, {
+      password,
+    });
   }
 
   // console.log(user);
@@ -85,16 +79,38 @@ router.get("/admin/contactMessage", async (req, res) => {
     contactRender: true,
     contact,
   });
-}); 
+});
 
-router.get("/admin/contactMessage/:id",async (req,res)=>{
-  const contact = await Contact.findById(req.params.id)
-  
-  res.render("admin",{
-    contactMessageRender:true,
-    contact
-  })
+router.get("/admin/contactMessage/:id", async (req, res) => {
+  const contact = await Contact.findById(req.params.id);
 
+  res.render("admin", {
+    contactMessageRender: true,
+    contact,
+  });
+});
+
+router.get("/admin/product", async (req, res) => {
+  res.render("admin", {
+    productRender:true,
+  });
 })
+
+router.post("/admin/product", async (req, res) => {
+ const {name,imageLink,price,discount} = req.body
+  const product = new Product({
+     name,
+     imageLink,
+      price,
+      discount
+ })
+ try {
+    await product.save()
+ } catch (error) {
+    console.log(product);
+ }
+
+  res.redirect("/admin/product")
+});
 
 module.exports = router;

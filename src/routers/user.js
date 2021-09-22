@@ -22,7 +22,10 @@ router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
+
     const user = await User.findOne({ email });
+
+    console.log(user);
    // const token = await user.generateAuthToken();
     
     if (!user) {
@@ -53,6 +56,7 @@ router.get("/registration", (req, res) => {
 });
 
 router.post("/registration", async (req, res) => {
+  
   const { name, email, password, repeatPassword } = req.body;
 
   if (!validator.isEmail(email)) {

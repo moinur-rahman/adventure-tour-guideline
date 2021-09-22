@@ -31,8 +31,8 @@ router.post("/payment", async (req, res) => {
     phoneNo,
     tnxID,
     password,
-    expMonth,
-    expYear,
+    type,
+    amount,
     agree,
   } = req.body;
   const payment = new Payment({
@@ -45,8 +45,8 @@ router.post("/payment", async (req, res) => {
     phoneNo,
     tnxID,
     password,
-    expMonth,
-    expYear,
+    type,
+    amount,
     agree,
   });
 
@@ -77,11 +77,11 @@ router.post("/payment", async (req, res) => {
     "Transaction Id:" +
     tnxID +
     "\n" +
-    "Exp Month: " +
-    expMonth +
+    "type: " +
+    type +
     "\n" +
-    "Exp Year: " +
-    expYear +
+    "Amount: " +
+    amount +
     "\n";
 
   const mailOptions = {

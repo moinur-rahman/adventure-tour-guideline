@@ -67,10 +67,6 @@ router.post("/review", upload.array("photos", 2), async (req, res) => {
     fbLink,
     twitterLink,
   });
-
-  // console.log(req.body, req.files);
-  // console.log(userPhotoPath);
-  // console.log(locationPhotoPath);
   try {
     const reviewMessage = await review.save();
    // console.log(reviewMessage);
@@ -81,8 +77,13 @@ router.post("/review", upload.array("photos", 2), async (req, res) => {
   //res.render("review");
 });
 
-router.get("/details",async (req,res) => {
-  res.render("Details")
+router.get("/details/:id",async (req,res) => {
+  const id = req.params.id;
+  const review = await Review.findOne({ _id: id });
+
+  res.render("Details",{
+    review
+  })
 })
 
 module.exports = router;

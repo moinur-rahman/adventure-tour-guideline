@@ -54,13 +54,13 @@ const Payment = mongoose.model("Payment", {
     trim: true,
     minlength: 6,
   },
-  expMonth: {
+  type: {
     type: String,
     required: true,
     trim: true,
   },
-  expYear: {
-    type: String,
+  amount: {
+    type: Number,
     required: true,
     trim: true,
   },

@@ -121,16 +121,24 @@
                 name="password"
                 required
               />
-              <label for="expMonth">Exp Month</label>
-              <input
-                type="text"
-                id="expMonth"
-                name="expMonth"
-                placeholder="March"
-              />
+              <label for="expMonth">Type</label>
+              <div class="methods">
+
+                <div>
+                  <input value="bkash" type="radio" name="method" />
+                  <label for="bkash">Package</label>
+
+                </div>
+                <div>
+                  <input value="rocket" type="radio" name="method" />
+                  <label for="rocker">Product</label>
+
+                </div>
+              </div>
+              
               <div class="row">
                 <div class="col-50">
-                  <label for="expYear">Exp Year</label>
+                  <label for="expYear">Amount</label>
                   <input
                     type="text"
                     id="expYear"

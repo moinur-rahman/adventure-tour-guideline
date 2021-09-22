@@ -3,11 +3,11 @@ const Product = require("../models/product")
 const router = new express.Router();
 
 router.get("/available-product",async (req,res)=>{
-    const product =await Product.find({})
+    const filteredProduct =await Product.find({})
    // console.log(product);
     try {
         res.render("shop",{
-            product
+           filteredProduct
         })
     } catch (error) {
         
@@ -15,16 +15,20 @@ router.get("/available-product",async (req,res)=>{
     
 })
 
-router.get("/available-product/:discount", async (req,res) => {
-   
-const filteredProduct = await fin
-
+router.post("/available-product", async (req,res) => {
+   console.log(req.body.discount);
+  
     try {
-      //  await product.save()
+        const filteredProduct = await Product.find({discount: { $gte: req.body.discount}} )
+        console.log(filteredProduct.length);
+          res.render("shop",{
+           
+              filteredProduct:filteredProduct
+          })
     } catch (error) {
-        
+        console.log(error); 
     }
-    res.redirect("/available-product")
+    // res.redirect("/available-product")
 })
 
 router.get("/single",async (req,res) => {

@@ -81,4 +81,8 @@ router.post("/review", upload.array("photos", 2), async (req, res) => {
   //res.render("review");
 });
 
+router.get("/details",async (req,res) => {
+  
+})
+
 module.exports = router;

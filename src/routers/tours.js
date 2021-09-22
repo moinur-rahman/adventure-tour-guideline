@@ -18,7 +18,7 @@ router.get("/tracking", (req, res) => {
 });
 
 router.get("/river", (req, res) => {
-  res.render("HomePage1/River/River");
+  res.render("River");
 });
 
 router.get("/bangladesh", (req, res) => {

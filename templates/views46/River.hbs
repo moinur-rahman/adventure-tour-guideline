@@ -1,0 +1,315 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Simonetta|Trade+Winds&display=swap" rel="stylesheet">
+    <style>
+        img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
+        }
+        h1{
+            color:rgba(5, 15, 156, 0.747);
+            text-align: center;
+            font-family: Trade-Winds;
+           }
+         h2{
+            color:rgba(9, 105, 5, 0.925);
+            text-align: center;
+            font-family: Trade-Winds;
+           }
+        a{
+            text-align: center;
+        }
+        p{
+            margin-left: 10%;
+            margin-right: 10%;
+            font-family: Simonetta;
+            font-size: 22px;
+            text-align: justify;
+        }
+        body {
+            background: linear-gradient(to bottom, #a3c0e5 0%, #954a6f 129%);
+            font-family: Verdana, sans-serif;
+        }
+        *{box-sizing: border-box;}
+        .mySlides {display: none;}
+        img {
+            vertical-align: middle;
+        width:100%;}
+    .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+    }
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: Simonetta;
+  font-size: 40px;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.heading{
+  float:left;
+  margin-left:120px;
+}
+ul{
+  list-style: none;
+}
+ a{
+  text-decoration: none;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+    </style>
+</head>
+<body>
+   
+    <div>
+        
+    <h1>Prominent Rivers</h1>
+
+    <div class="slideshow-container" style="width: 800px;height: 600px;">
+
+    <div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="/images46/Colorado River – Cataract Canyon, UT.jpg" style="width:100%;height: 500px;">
+  <div class="text">Colorado River – Cataract Canyon</div>
+    </div>
+
+    <div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="/images46/Green River – Desolation Canyon, UT.jpg" style="width:100%;height: 500px;">
+  <div class="text">Green River – Desolation Canyon</div>
+    </div>
+
+    <div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="/images46/Green River – Gates of Lodore, CO.jpg" style="width:100%;height: 500px;">
+  <div class="text">Green River – Gates of Lodore</div>
+    </div>
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="/images46/Lower Salmon River, ID.jpg" style="width:100%;height: 500px;">
+    <div class="text">Lower Salmon River</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="/images46/Main Salmon River, ID.jpg" style="width:100%;height: 500px;">
+    <div class="text">Main Salmon River</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="/images46/Middle Fork Salmon River.png" style="width:100%;height: 500px;">
+    <div class="text">Middle Fork Salmon Rive</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="/images46/Rogue River, OR.jpg" style="width:100%;height: 500px;">
+    <div class="text">Rogue River,OR</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <img src="/images46/Snake River – Hells Canyon, ID.jpg" style="width:100%;height: 500px;">
+    <div class="text">Snake River – Hells Canyon, ID</div>
+  </div>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>  
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); 
+    }
+    </script>
+    </div>
+    <div>
+    <br>
+    <h1>Colorado River – Cataract Canyon</h1>
+    <img src="/images46/Colorado River – Cataract Canyon, UT.jpg" alt="COlorado River" style="width:50%;">
+   
+    <br>
+    
+    <p>Cataract Canyon is a 46-mile-long (74 km) canyon of the Colorado River located within Canyonlands National Park and Glen Canyon National Recreation Area in southern Utah. It begins at the Colorado's confluence with the Green River and its downstream terminus is the confluence with the Dirty Devil River. The lower half of the canyon is submerged beneath Lake Powell when the lake is at its normal high water elevation of 3,700 feet (1,100 m).</p>
+    
+    <a href="https://en.wikipedia.org/wiki/Cataract_Canyon"><h3>More details</h3></a>
+    <br>
+    <h1 class="heading"><span>D</span>irection: </h1>
+      
+    <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25194.119395936297!2d-110.31153649630775!3d37.877486703398624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8737ca8d760038a5%3A0x28771133fb8aa59!2sCataract%20Canyon!5e0!3m2!1sen!2sbd!4v1621828428465!5m2!1sen!2sbd"  height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <br>
+    <div>
+        <br>  <h2>Green River – Desolation Canyon</h2>
+    <img src="/images46/Green River – Desolation Canyon, UT.jpg" alt="Green River" style="width:50%;">
+    <br>
+    
+    <p>The canyon begins in southwestern Uintah County and then meanders roughly south to along (and becomes) the county line between Uintah and Carbon counties (including the entire eastern border of Carbon County). Continuing its southernly meanders it then becomes the county line between Emery and Grand counties, until it reaches its mouth in the Roan Cliffs. (The Green River continues flowing south through Gray Canyon.) The canyon is situated between the West Tavaputs Plateau on the west and the East Tavaputs Plateau on the east. At its deepest point, a relief of over 5,000 feet (1,500 m) exists from river level to the unseen rim of the Tavaputs Plateau.</p>
+    <a href="https://en.wikipedia.org/wiki/Green_River"><h3>More details</h3></a>
+    <br>
+    <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe  style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12329.381014351922!2d-110.01509947367914!3d39.41631659916737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8748c9123e99623f%3A0x6d6f3f32277e2e3d!2sDesolation%20Canyon!5e0!3m2!1sen!2sbd!4v1621828488617!5m2!1sen!2sbd"  height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div>
+        <br>
+        <h2>Green River – Gates of Lodore</h2>
+        <img src = "/images46/Green River – Gates of Lodore, CO.jpg" alt="Green River – Gates of Lodore" style="width:50%;"> 
+        <p>The Gates of Lodore is the scenic entrance to the Canyon of Lodore, a canyon on the Green River in northwestern Colorado, United States.[1] The name Gates of Lodore has become synonymous with the canyon itself and the two names are used interchangeably. The Canyon commences as the Green River departs Browns Park and cuts through the Uinta Mountains meandering eighteen miles until its end at Echo Park (Colorado), the confluence of the Green and Yampa River.[2] It was named by the Powell Expedition after the English poem Cataract of Lodore.[3] It is located in Dinosaur National Monument.</p>
+        <a href="https://en.wikipedia.org/wiki/Gates_of_Lodore"><h3>More details</h3></a>
+        <br>
+        <h1 class="heading"><span>D</span>irection: </h1>
+          
+        <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.951821738454!2d-108.90009597295351!3d40.71277788406294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8745216508e8c75b%3A0xdca4e92d2e5fec6e!2sGates%20of%20Lodore!5e0!3m2!1sen!2sbd!4v1621828552385!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div>
+        <br> <h1 >Lower Salmon River</h1>
+     <img src ="/images46/Lower Salmon River, ID.jpg" alt="Lower Salmon River" style="width:50%;">   
+     <br>
+     <p>The Salmon River is located in Idaho in the northwestern United States. The Salmon is also known as "The River of No Return". It flows for 425 miles (685 km) through central Idaho, draining a rugged, thinly populated watershed of 14,000 square miles (36,000 km2) and dropping more than 7,000 feet (2,100 m) between its headwaters, near Galena Summit above the Sawtooth Valley in the Sawtooth National Recreation Area, and its confluence with the Snake River. Measured at White Bird, its average discharge is 11,060 cubic feet per second (82,700 US gal/s; 313 m3/s).[6] It is one of the largest rivers in the continental United States without a single dam on its mainstem.[7]
+
+        Cities located along the Salmon River include Stanley, Clayton, Challis, Salmon, Riggins, and White Bird. Redfish Lake and Little Redfish Lake near Stanley, which flow into the river via Redfish Lake Creek, are the terminus of the longest Pacific sockeye salmon migration in North America.[8]
+        
+        The lower half of the river provides the time zone boundary for the state, with northern Idaho on Pacific time and the rest of the state on Mountain time.</p>
+    
+     <a href="https://en.wikipedia.org/wiki/Salmon_River_(Idaho)"><h3>More details</h3></a>
+     <br>
+     <h1 class="heading"><span>D</span>irection: </h1>
+      
+     <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44805.82231201381!2d-116.3504304586519!3d45.4221653932663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a6c56823e0ad59%3A0xe4c6817a318ca284!2sLower%20Salmon%20River!5e0!3m2!1sen!2sbd!4v1621828611319!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <br>
+    <div>
+        <br> <h1>Rogue River</h1>
+        <img src = "/images46/Rogue River, OR.jpg" alt="Rogue River, OR" style="width:50%;">   
+        <br>
+        <p>The Rogue River (Tolowa: yan-shuu-chit’ taa-ghii~-li~’ Takelma: tak-elam) in southwestern Oregon in the United States flows about 215 miles (346 km) in a generally westward direction from the Cascade Range to the Pacific Ocean. Known for its salmon runs, whitewater rafting, and rugged scenery, it was one of the original eight rivers named in the Wild and Scenic Rivers Act of 1968. Beginning near Crater Lake, which occupies the caldera left by the explosive volcanic eruption of Mount Mazama, the river flows through the geologically young High Cascades and the older Western Cascades, another volcanic province. Further west, the river passes through multiple exotic terranes of the more ancient Klamath Mountains. In the Kalmiopsis Wilderness section of the Rogue basin are some of the world's best examples of rocks that form the Earth's mantle. Near the mouth of the river, the only dinosaur fragments ever discovered in Oregon were found in the Otter Point Formation, along the coast of Curry County.</p>
+        <a href="https://en.wikipedia.org/wiki/Rogue_River_(Oregon)"><h3>More details</h3></a>
+        <br>
+        <h1 class="heading"><span>D</span>irection: </h1>
+          
+          <iframe style="width: 900px;margin-left:45px;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23557.39377518819!2d-123.18789562732675!3d42.43466879147311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c584e9d36e8ab5%3A0x2a0ba4dc53615704!2sRogue%20River%2C%20OR%2C%20USA!5e0!3m2!1sen!2sbd!4v1621828677457!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div>
+        <br><h1>Snake River – Hells Canyon</h1>
+    <img src = "/images46/Snake River – Hells Canyon, ID.jpg" alt="Snake River" style="width:50%;">
+    <br>
+    <p> Hells Canyon is a 10-mile-wide (16 km) canyon located along the border of eastern Oregon, eastern Washington and western Idaho in the United States. It is part of the Hells Canyon National Recreation Area and is North America's deepest river gorge at 7,993 feet (2,436 m).
+
+        The canyon was carved by the waters of the Snake River, which flows more than one mile (1.6 km) below the canyon's west rim on the Oregon side and 7,400 feet (2,300 m) below the peaks of Idaho's Seven Devils Mountains range to the east. Most of the area is inaccessible by road. </p>
+    <a href="https://en.wikipedia.org/wiki/Hells_Canyon"><h3>More details</h3></a>
+    <br>
+    <h1 class="heading"><span>D</span>irection: </h1>
+      
+      <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893887.410430117!2d-118.94409084647224!3d44.90173610620842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a13334daa42b0f%3A0x71e8de7881479dcd!2sHells%20Canyon%20Wilderness!5e0!3m2!1sen!2sbd!4v1621828781324!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div>
+        <br> <h1>Main Salmon River</h1>
+        <img src = "/images46/Main Salmon River, ID.jpg" alt="Main Salmon River" style="width:50%;">
+        <br>
+        <p>The Little Salmon River formed as a result of a rift valley developing between the Rocky Mountains and the Columbia Plateau section of the Intermontane Plateaus. Columbia River basalts underlie much of the western and central parts of the watershed, while other types of volcanic rock of closer origin form the foundations of the eastern mountains. The entire watershed is dissected by fault-block rifting. The water table is high and soils are generally well drained and of volcanic origin.[3] The upper section of the watershed is a broad and low-gradient, sediment-floored valley used primarily for agriculture and ranching activities, and also has most of the basin's population. The rest of the river flows in a wild, deep, and narrow canyon mostly undeveloped with the exception of the highway. </p>
+            <a href="https://en.wikipedia.org/wiki/Little_Salmon_River"><h3>More details</h3></a>
+            <br>
+            <h1 class="heading"><span>D</span>irection: </h1>
+          
+            <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.9646096069637!2d-116.3151656850511!3d45.430214743732485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a6c558d416859f%3A0xf0aaccea0f38d957!2sSalmon%20River%20Experience!5e0!3m2!1sen!2sbd!4v1621828858212!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div>
+        <br> <h1>Middle Fork Salmon River</h1>
+        <img src = "/images46/Middle Fork Salmon River.png" alt="Middle Fork Salmon River" style="width:40%;">   
+        <br>
+        <p>The Middle Fork of the Salmon River is a 104-mile-long (167 km) river in central Idaho in the northwestern United States. The Middle Fork is a tributary to the Salmon River, and it lies in the center of the 2.5-million-acre (3,900 sq mi; 10,000 km2) Frank Church-River of No Return Wilderness Area. Designated by the United States Congress as a federally protected wilderness in 1980, it is part of the largest roadless area left in the lower 48 states. </p>
+        <a href="https://en.wikipedia.org/wiki/Middle_Fork_Salmon_River"><h3>More details</h3></a>
+        <br>
+        <h1 class="heading"><span>D</span>irection: </h1>
+          
+          <iframe style="width: 900px;margin-left:45px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d723115.177037449!2d-115.52523324597145!3d44.930073263522445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a7eb759a405875%3A0x8682ebe7beed5957!2sMiddle%20Fork%20Salmon%20River!5e0!3m2!1sen!2sbd!4v1621828908982!5m2!1sen!2sbd" width=100% height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+
+
+<br>
+<br>
+<br>
+ <ul><li><a href="/"><h2 style="color:rgba(5, 15, 156, 0.747);">Back to Home Page</h2></a></li></ul>
+  </body>
+</html>
+
+    

@@ -46,6 +46,10 @@ header div h1 {
     grid-column: 2/-1;
 }
 
+.home-button{
+    height: 40px;
+}
+
 /* .animate__animated.animate__heartBeat {
     animation-iteration-count: infinite;
     animation-duration: 2s;  

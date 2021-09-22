@@ -82,7 +82,7 @@ router.post("/review", upload.array("photos", 2), async (req, res) => {
 });
 
 router.get("/details",async (req,res) => {
-  
+  res.render("Details")
 })
 
 module.exports = router;

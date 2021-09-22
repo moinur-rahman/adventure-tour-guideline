@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const validator = require('validator')
 const Review = mongoose.model("Review", {
   name: {
     type: String,
@@ -16,6 +16,16 @@ const Review = mongoose.model("Review", {
         throw new Error("Email is invalid");
       }
     },
+  },
+  userPhotoPath: {
+    type: String,
+
+    trim: true,
+  },
+  locationPhotoPath: {
+    type: String,
+
+    trim: true,
   },
   place: {
     type: String,
@@ -45,5 +55,4 @@ const Review = mongoose.model("Review", {
   },
 });
 
-
-module.exports = Review
+module.exports = Review;

@@ -1,39 +1,84 @@
 const express = require("express");
 const Review = require("../models/review");
+const multer = require("multer");
+const path = require("path");
 const router = new express.Router();
 
-router.get("/review", async (req, res) => {
-  res.render("review");
+//Set storage engine
+const uploadDirectoryPath = path.join(__dirname, "../../public/uploads");
+const storage = multer.diskStorage({
+  destination: uploadDirectoryPath,
+  filename: function (req, file, cb) {
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
+  },
 });
 
-router.post("/review", async (req, res) => {
-  const {
-    name,
-    userPhoto,
-    email,
-    place,
-    newPlace,
-    locationPhoto,
-    reviewMessage,
-    fbLink,
-    twitterLink,
-  } = req.body;
+//Init Upload
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 1000000 },
+  fileFilter: function (req, file, cb) {
+    checkFileType(file, cb);
+  },
+});
+
+// Check File Type
+function checkFileType(file, cb) {
+  // Allowed ext
+  const filetypes = /jpeg|jpg|png|gif/;
+  // Check ext
+  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+  // Check mime
+  const mimetype = filetypes.test(file.mimetype);
+
+  if (mimetype && extname) {
+    return cb(null, true);
+  } else {
+    cb("Error: Images Only!");
+  }
+}
+
+router.get("/review", async (req, res) => {
+  try {
+    const reviews =await Review.find({});
+    res.render("review", { reviews });
+   // console.log(reviews);
+  } catch (error) {}
+});
+
+router.post("/review", upload.array("photos", 2), async (req, res) => {
+  const { name, email, place, newPlace, reviewMessage, fbLink, twitterLink } =
+    req.body;
+
+  const userPhotoPath = "/uploads/" + req.files[0].filename;
+  const locationPhotoPath = "/uploads/" + req.files[1].filename;
 
   const review = new Review({
     name,
-    userPhoto,
+    userPhotoPath,
     email,
     place,
     newPlace,
-    locationPhoto,
+    locationPhotoPath,
     reviewMessage,
     fbLink,
     twitterLink,
   });
 
-  console.log(review);
-
-  res.render("review");
+  // console.log(req.body, req.files);
+  // console.log(userPhotoPath);
+  // console.log(locationPhotoPath);
+  try {
+    const reviewMessage = await review.save();
+   // console.log(reviewMessage);
+  } catch (error) {
+    console.log(error);
+  }
+  res.redirect("/review")
+  //res.render("review");
 });
 
 module.exports = router;

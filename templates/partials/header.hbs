@@ -21,7 +21,8 @@
 						<li class="has-dropdown">
 							<a href="/travelling-style">Travel</a>
 							<ul class="dropdown">
-								<li><a href="/travelling-style"><i class="fa fa-circle-o-notch"></i>Travel Style</a></li>
+								<li><a href="/travelling-style"><i class="fa fa-circle-o-notch"></i>Travel Style</a>
+								</li>
 								<li><a href="/travelling-type"><i class="fa fa-crosshairs"></i>Travel Type</a></li>
 								<li><a href="/hotels"><i class='fas fa-hotel'></i>Hotels</a></li>
 							</ul>
@@ -29,13 +30,16 @@
 						<li class="has-dropdown">
 							<a href="/videos">Gallery</a>
 							<ul class="dropdown">
-								
+
 								<li><a href="/photos"><i class="fa fa-picture-o"></i>Photos</a></li>
 								<li><a href="/videos"><i class="fa fa-video-camera"></i>videos</a></li>
 								<li><a href="/story"><i class="fa fa-book"></i>Short Stories</a></li>
 							</ul>
 						</li>
 						<li><a href="/review">Review</a></li>
+						<li>
+							<a href="/available-product"><i class="fa fa-shopping-cart"></i>Available Products</a>
+						</li>
 						<li><a href="/contact">Contact</a></li>
 
 						<li class="has-dropdown">
@@ -65,9 +69,9 @@
 		const profile = document.querySelector(".profile")
 		profile.textContent = userData.name
 		profile.setAttribute("href", "/profile/" + userData._id)
-		document.querySelector(".settings a").setAttribute("href","/profile/settings/" + userData._id)
+		document.querySelector(".settings a").setAttribute("href", "/profile/settings/" + userData._id)
 	}
-	else{
+	else {
 		document.querySelector(".profile").style.display = "none";
 	}
 	document.querySelector(".logout").addEventListener("click", () => {

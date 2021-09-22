@@ -13,6 +13,7 @@ const contactRouter = require("./routers/contact");
 const footerRouter = require("./routers/footer");
 const adminRouter = require("./routers/admin");
 const profileRouter = require("./routers/profile");
+const availableProductRouter = require("./routers/availableProduct");
 
 const hbs = require("hbs");
 
@@ -47,6 +48,7 @@ app.use(contactRouter);
 app.use(footerRouter);
 app.use(adminRouter);
 app.use(profileRouter);
+app.use(availableProductRouter)
 
 app.listen(port, () => {
   console.log("Server is up on port 3000!");

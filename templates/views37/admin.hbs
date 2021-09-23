@@ -41,14 +41,20 @@
           </a>
         </li>
         <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-question-circle"></i></span>
+          <a href="/admin/payment">
+            <span class="icon"><i class="fas fa-money-bill-wave"></i></span>
             <span class="title">Payments</span>
           </a>
         </li><li>
           <a href="/admin/product">
-            <span class="icon"><i class="fas fa-question-circle"></i></span>
-            <span class="title">Products</span>
+            <span class="icon"><i class="fab fa-product-hunt"></i></span>
+            <span class="title">Add Products</span>
+          </a>
+        </li>
+        </li><li>
+          <a href="/admin/productList">
+            <span class="icon"><i class="fab fa-product-hunt"></i></span>
+            <span class="title">Products List</span>
           </a>
         </li>
        
@@ -73,8 +79,10 @@
         </div> --}}
         
       </div>
-      {{#if dashRender}}
-      {{>adminDash}}
+      {{#if paymentRender}}
+      {{>adminPayment}}
+      {{else if paymentViewRender}}
+      {{>adminPaymentView payment=payment}}
       {{else if userRender}}
       {{>adminUser user = user}}
       {{else if userEditRender}}
@@ -84,7 +92,9 @@
       {{else if contactMessageRender}}
       {{>adminContactMessage contact = contact}}
       {{else if productRender}}
-      {{>product}}
+      {{>adminProduct}}
+      {{else if productListRender}}
+      {{>adminProductList}}
       {{/if}}
     </div>
   </div>

@@ -7,5 +7,10 @@ function toggleMenu() {
     main.classList.toggle("active");
   }
 
+  const userData = JSON.parse(localStorage.getItem("userInfo"))
 
+  if(!userData.isAdmin)
+  {
+    window.location="/"
+  }
  

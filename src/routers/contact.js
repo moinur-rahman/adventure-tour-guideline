@@ -17,7 +17,10 @@ router.post("/contact",async (req, res) => {
   try {
       await contact.save()
       res.render("success",{
-          message:"Message sent successfully"
+          message:"Message sent successfully",
+          user:JSON.stringify({
+            name:"payment"
+          })
       })
   } catch (error) {
       console.log(error);

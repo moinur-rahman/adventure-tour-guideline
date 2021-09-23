@@ -20,7 +20,7 @@ router.post("/available-product", async (req,res) => {
   
     try {
         const filteredProduct = await Product.find({discount: { $gte: req.body.discount}} )
-        console.log(filteredProduct.length);
+       // console.log(filteredProduct.length);
           res.render("shop",{
            
               filteredProduct:filteredProduct
@@ -31,8 +31,16 @@ router.post("/available-product", async (req,res) => {
     // res.redirect("/available-product")
 })
 
-router.get("/single",async (req,res) => {
-    res.render("single")
+router.get("/single/:id",async (req,res) => {
+    const product =await Product.findById(req.params.id)
+   //console.log(product);
+    res.render("single",{
+        product
+    })
+})
+
+router.post("/single",async (req,res) => {
+    console.log(req.body);
 })
 
 module.exports = router;

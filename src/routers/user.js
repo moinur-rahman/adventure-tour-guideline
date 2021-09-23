@@ -2,7 +2,17 @@ const express = require("express");
 const User = require("../models/user");
 const router = new express.Router();
 const validator = require("validator");
+const nodemailer = require("nodemailer");
 const { json } = require("body-parser");
+require("dotenv").config();
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.email,
+    pass: process.env.password,
+  },
+});
 
 router.get("/", (req, res) => {
   res.render("HomePage");
@@ -58,7 +68,22 @@ router.get("/registration", (req, res) => {
 router.post("/registration", async (req, res) => {
   
   const { name, email, password, repeatPassword } = req.body;
+   
+  const sentMessage =
+    "Welcome " +
+    name +
+    ",Your Registration completed successfully.\n"
+    +"You can now login using this(" + email
+    +") mail";
 
+    const mailOptions = {
+      from: "adventure374650@gmail.com",
+      to: email,
+      subject: "Registration Successful for Adventure Tour Guideline",
+      text: sentMessage,
+    };
+  
+    
   if (!validator.isEmail(email)) {
     return res.render("registration", {
       errorMessage: "Email is not valid",
@@ -86,7 +111,7 @@ router.post("/registration", async (req, res) => {
   });
   try {
     const savedUser = await user.save();
-    
+    await transporter.sendMail(mailOptions);
    // const token =await user.generateAuthToken()
     res.render("success", {
       message: "Registration successful",

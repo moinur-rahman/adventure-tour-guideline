@@ -1,31 +1,31 @@
 <div class="details">
   <div class="recentOrders">
     <div class="cardHeader">
-      <h2>Users List</h2>
- 
+      <h2>Payments List</h2>
+      
     </div>
     <table>
       <thead>
         <tr>
           <td class="adminUserData">Email</td>
           <td class="adminUserData">Name</td>
-          <td class="adminUserData">Password</td>
+          <td class="adminUserData">Amount</td>
           <td class="adminUserData"></td>
           <td class="adminUserData"></td>
         </tr>
       </thead>
       <tbody>
-        {{#each user}}
+        {{#each payment}}
           {{#with this}}
             <tr>
               <td class="adminUserData">{{email}}</td>
-              <td class="adminUserData">{{name}}</td>
-              <td class="adminUserData">{{password}}</td>
-              <td class="adminUserData"><a href="/admin/user/edit/{{_id}}">Edit<i
-                    class="fas fa-edit"
+              <td class="adminUserData">{{fullName}}</td>
+              <td class="adminUserData">{{amount}}</td>
+              <td class="adminUserData"><a href="/admin/payment/{{_id}}">View<i
+                    class="fas fa-eye"
                   ></i></a></td>
               <td class="adminUserData"><a
-                  href="/admin/user/delete/{{_id}}"
+                  href="/admin/payment/delete/{{_id}}"
                   type="button"
                 ><i class="fas fa-trash"></i></a>
               </td>

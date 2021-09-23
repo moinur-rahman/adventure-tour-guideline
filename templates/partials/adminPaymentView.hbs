@@ -1,0 +1,60 @@
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Payment Details</h2>
+
+        </div>
+
+        <table class="adminUserEditTable">
+
+            <tbody>
+                {{#with payment}}
+                <tr>
+
+                    <td class="adminUserEditData"><b>Email : </b></td>
+                    <td class="adminUserEditData">{{email}}</td>
+
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Name : </b></td>
+                    <td class="adminUserEditData">{{fullName}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>City: </b></td>
+                    <td class="adminUserEditData">{{city}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>State : </b></td>
+                    <td class="adminUserEditData">{{state}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Zip : </b></td>
+                    <td class="adminUserEditData">{{zip}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>State : </b></td>
+                    <td class="adminUserEditData">{{state}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Phone Number : </b></td>
+                    <td class="adminUserEditData">{{phoneNo}}</td>
+                </tr>
+                <tr>
+                    <td class="adminUserEditData"><b>Transaction ID : </b></td>
+                    <td class="adminUserEditData">{{tnxID}}</td>
+                </tr> <tr>
+                    <td class="adminUserEditData"><b>Type : </b></td>
+                    <td class="adminUserEditData">{{type}}</td>
+                </tr> <tr>
+                    <td class="adminUserEditData"><b>Amount : </b></td>
+                    <td class="adminUserEditData">{{amount}}</td>
+               
+                </tr>
+
+
+                {{/with}}
+            </tbody>
+        </table>
+    </div>
+
+</div>

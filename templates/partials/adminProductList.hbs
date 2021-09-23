@@ -7,21 +7,23 @@
     <table class="adminContactTable">
       <thead>
         <tr>
-          <td class="adminContactData">Email</td>
           <td class="adminContactData">Name</td>
+          <td class="adminContactData">Image Link</td>
+          <td class="adminContactData">Price</td>
           <td class="adminContactData">Subject</td>
         </tr>
       </thead>
       <tbody>
-        {{#each contact}}
+        {{#each product}}
           {{#with this}}
             <tr>
-              <td class="adminContactData">{{email}}</td>
-              <td class="adminContactData">{{firstName}} {{lastName}}</td>
-              <td class="adminContactData">{{subject}}</td>
-              <td class="adminContactData"><a href="/admin/contactMessage/{{_id}}">View<i class="fas fa-eye"></i></a></td>
+              <td class="adminContactData">{{name}}</td>
+              <td class="adminContactData">{{imageLink}}</td>
+              <td class="adminContactData">{{price}}</td>
+              <td class="adminContactData">{{discount}}</td>
+              {{!-- <td class="adminContactData"><a href="/admin/contactMessage/{{_id}}">View<i class="fas fa-eye"></i></a></td> --}}
               <td class="adminContactData"><a
-                  href="/admin/contactMessage/delete/{{_id}}"
+                  href="/product/delete/{{_id}}"
                   type="button"
                 ><i class="fas fa-trash"></i></a>
               </td>

@@ -3,12 +3,17 @@ const router = new express.Router();
 
 const Product = require("../models/product") 
 const User = require("../models/user");
-
+const Payment = require("../models/payment")
 const Contact = require("../models/contact");
 
-router.get("/admin", (req, res) => {
+router.get("/admin",async (req, res) => {
+  const user = await User.find({});
+
+  // console.log(user);
+
   res.render("admin", {
-    dashRender: true,
+    userRender: true,
+    user,
   });
 });
 
@@ -90,11 +95,56 @@ router.get("/admin/contactMessage/:id", async (req, res) => {
   });
 });
 
+
+router.get("/admin/contactMessage/delete/:id",async (req,res)=>{
+   const contact = await Contact.deleteOne({_id:req.params.id})
+   console.log(contact);
+   res.redirect("/admin/contactMessage")
+})
+
+router.get("/admin/payment",async (req,res) => {
+const payment = await Payment.find({})
+
+try {
+  res.render("admin",{
+    paymentRender:true,
+    payment
+  })
+} catch (error) {
+  console.log(error);
+}
+
+})
+
+router.get("/admin/payment/:id",async (req,res) =>{
+const payment = await Payment.findById(req.params.id)
+try {
+  res.render("admin",
+  {
+    paymentViewRender:true,
+    payment
+  })
+} catch (error) {
+  
+}
+})
+
+router.get("/admin/payment/delete/:id", async (req, res) => {
+  const id = req.params.id;
+ const user = await Payment.deleteOne({_id:id});
+
+   console.log(user);
+
+  res.redirect("/admin/payment");
+});
+
 router.get("/admin/product", async (req, res) => {
   res.render("admin", {
     productRender:true,
   });
 })
+
+
 
 router.post("/admin/product", async (req, res) => {
  const {name,imageLink,price,discount} = req.body
@@ -112,5 +162,21 @@ router.post("/admin/product", async (req, res) => {
 
   res.redirect("/admin/product")
 });
+
+router.get("/admin/productList",async (req,res) =>{
+  const product =await Product.find({})
+  
+  res.render("admin",{
+  
+    productListRender:true,
+    product
+  
+  })
+})
+router.get("/product/delete/:id",async (req,res)=>{
+  await Product.deleteOne({_id:req.params.id})
+  
+  res.redirect("/admin/productList")
+})
 
 module.exports = router;

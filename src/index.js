@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
-require("./db/mongoose");
+// require("./db/mongoose");
 //Router
 const userRouter = require("./routers/user");
 const paymentRouter = require("./routers/payment");
